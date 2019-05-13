@@ -11,14 +11,10 @@ import Foundation
 import os.log
 
 class NumberInputInterfaceController: WKInterfaceController {
-    enum NegativeEqualsButtonState{
-        case plusMinus
-        case equals
-    }
     enum DecimalState{
         case leftOfDecimal
-        case rightOfDecimalInt
-        case rightOfDecimalDouble
+        case rightOfDecimalAwaitingDecimals
+        case rightOfDecimal
     }
     enum AcEqualsState{
         case enteringX
@@ -27,9 +23,6 @@ class NumberInputInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var valueDisplay: WKInterfaceLabel!
     @IBOutlet weak var acButtonLabel: WKInterfaceButton!
-    
-    
-    var negativeEqualsButtonState: NegativeEqualsButtonState = .plusMinus
     
     var decimalState: DecimalState = .leftOfDecimal
     
@@ -72,7 +65,7 @@ class NumberInputInterfaceController: WKInterfaceController {
             }
             switch content{
             case .tip:
-                break
+                reset()
             default:
                 let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
                 if let toDisplay = result{
@@ -152,8 +145,8 @@ class NumberInputInterfaceController: WKInterfaceController {
                 valueLabel = ValueLabel(newValue)
             }
             
-        case .rightOfDecimalDouble: fallthrough
-        case .rightOfDecimalInt:
+        case .rightOfDecimalAwaitingDecimals: fallthrough
+        case .rightOfDecimal:
             decimalMultiplier = decimalMultiplier * 0.1
             decimalPlaces += 1
             if(decimalMultiplier < 0.00000000001){
@@ -170,10 +163,9 @@ class NumberInputInterfaceController: WKInterfaceController {
     @IBAction func decimalButton() {
         switch decimalState {
         case .leftOfDecimal:
-            decimalState = .rightOfDecimalInt
-        case .rightOfDecimalInt:
-            decimalState = .leftOfDecimal
-        case .rightOfDecimalDouble:
+            decimalState = .rightOfDecimalAwaitingDecimals
+        case .rightOfDecimalAwaitingDecimals: fallthrough
+        case .rightOfDecimal:
             break
         }
     }

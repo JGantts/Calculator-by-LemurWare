@@ -12,9 +12,10 @@ import os.log
 
 class BasicFunctionInterfaceController: WKInterfaceController {
 
-    @IBOutlet weak var valueLabel: WKInterfaceLabel!
+    @IBOutlet weak var valueLabelDisplay: WKInterfaceLabel!
     
     var value: Double = 0
+    var valueLabel = ValueLabel(0)
     
     override init(){
         super.init()
@@ -29,8 +30,9 @@ class BasicFunctionInterfaceController: WKInterfaceController {
                 os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
                 return
             }
+            self.valueLabel = ValueLabel(content.value, label: content.label)
             value = content.value
-            valueLabel.setText(content.label)
+            valueLabelDisplay.setText(content.label)
             
         default:
             os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)

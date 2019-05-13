@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030D513B2289DE730076C693 /* InitializerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D513A2289DE730076C693 /* InitializerInterfaceController.swift */; };
+		030D513D2289F61B0076C693 /* TipFunctionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D513C2289F61B0076C693 /* TipFunctionInterfaceController.swift */; };
 		034D7FAF2287D675001BB103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FAE2287D675001BB103 /* AppDelegate.swift */; };
 		034D7FB12287D675001BB103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FB02287D675001BB103 /* ViewController.swift */; };
 		034D7FB42287D675001BB103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D7FB22287D675001BB103 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		030D513A2289DE730076C693 /* InitializerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerInterfaceController.swift; sourceTree = "<group>"; };
+		030D513C2289F61B0076C693 /* TipFunctionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipFunctionInterfaceController.swift; sourceTree = "<group>"; };
 		034D7FAB2287D675001BB103 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034D7FAE2287D675001BB103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034D7FB02287D675001BB103 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				034D7FD12287D678001BB103 /* NumberInputInterfaceController.swift */,
 				034D7FEA2287EB6B001BB103 /* BasicFunctionInterfaceController.swift */,
 				034D7FEC2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift */,
+				030D513C2289F61B0076C693 /* TipFunctionInterfaceController.swift */,
 				035C8E5D2288FD6A00EF10F5 /* MathDoer.swift */,
 				034D7FD32287D678001BB103 /* ExtensionDelegate.swift */,
 				034D7FD52287D678001BB103 /* ComplicationController.swift */,
@@ -331,6 +334,7 @@
 				034D7FED2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift in Sources */,
 				030D513B2289DE730076C693 /* InitializerInterfaceController.swift in Sources */,
 				034D7FD42287D678001BB103 /* ExtensionDelegate.swift in Sources */,
+				030D513D2289F61B0076C693 /* TipFunctionInterfaceController.swift in Sources */,
 				034D7FEF2287EC9B001BB103 /* Functions.swift in Sources */,
 				035C8E60228902AC00EF10F5 /* ValueLabel.swift in Sources */,
 				034D7FEB2287EB6B001BB103 /* BasicFunctionInterfaceController.swift in Sources */,
