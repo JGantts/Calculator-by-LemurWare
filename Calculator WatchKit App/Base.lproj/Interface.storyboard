@@ -267,7 +267,10 @@
                                                 <button width="0.33300000000000002" height="1" alignment="right" title="AC" id="Uuv-sq-Xwp">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonHighlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                                    <variation key="device=watch38mm">
+                                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                                    </variation>
                                                     <connections>
                                                         <action selector="acButton" destination="AgC-eL-Hgc" id="yrU-FB-yFC"/>
                                                     </connections>

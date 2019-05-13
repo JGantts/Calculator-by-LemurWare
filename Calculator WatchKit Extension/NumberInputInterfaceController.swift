@@ -11,21 +11,20 @@ import Foundation
 import os.log
 
 class NumberInputInterfaceController: WKInterfaceController {
-    enum DecimalState{
+    enum State{
+        case xValueNoDeimcals
+        case xValueAwaitingDecimals
+        case xValueWithDecimals
+        case yValueDisplayingX
+        case yValueNoDeimcals
+        case yValueAwaitingDecimals
+        case yValueWithDecimals
         case displayingResult
-        case leftOfDecimal
-        case rightOfDecimalAwaitingDecimals
-        case rightOfDecimal
     }
-    enum AcEqualsState{
-        case enteringX
-        case enteringY(Function)
-    }
+
     
     @IBOutlet weak var valueDisplay: WKInterfaceLabel!
     @IBOutlet weak var acButtonLabel: WKInterfaceButton!
-    
-    var decimalState: DecimalState = .leftOfDecimal
     
     var valueLabel: ValueLabel = ValueLabel(0){
         didSet{
@@ -43,11 +42,12 @@ class NumberInputInterfaceController: WKInterfaceController {
         }
     }
     var xValue: Double? = nil
+    var math: Function? = nil
     
     var decimalMultiplier: Double = 1
     var decimalPlaces: Int = 0
     
-    var acEqualsState: AcEqualsState = .enteringX
+    var state: State = .xValueNoDeimcals
     
     override init(){
         super.init()
@@ -74,10 +74,10 @@ class NumberInputInterfaceController: WKInterfaceController {
                     valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
                 }else{
                     xValue = valueLabel.v
+                    math = content
                     let labelTemp = valueLabel.label
                     reset()
-                    acButtonLabel.setTitle("=")
-                    acEqualsState = .enteringY(content)
+                    state = .yValueDisplayingX
                     valueLabel = ValueLabel(0.0, label: labelTemp)
                 }
             }
@@ -135,49 +135,95 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     private func numberButton(_ number: Double){
-        switch decimalState {
+        switch state {
             
-        case .leftOfDecimal:
-            let newValue = (valueLabel.v * 10) + number
-            if(valueLabel.v >= Double(Int64.max/100)){
-                valueLabel = ValueLabel(0)
-                valueDisplay.setText("E: Too large")
-            }else{
-                valueLabel = ValueLabel(newValue)
-            }
+        case .displayingResult:
+            reset()
+            addLeftOfDecimal(number)
             
-        case .rightOfDecimalAwaitingDecimals: fallthrough
-        case .rightOfDecimal:
-            decimalMultiplier = decimalMultiplier * 0.1
-            decimalPlaces += 1
-            if(decimalMultiplier < 0.00000000001){
-                valueLabel = ValueLabel(0)
-                valueDisplay.setText("E: Too specific")
-            }else{
-                let newValue = valueLabel.v + (number * decimalMultiplier)
-                valueLabel = ValueLabel(newValue)
-            }
+        case .yValueDisplayingX:
+            acButtonLabel.setTitle("=")
+            state = .yValueNoDeimcals
+            addLeftOfDecimal(number)
             
+        case .xValueNoDeimcals: fallthrough
+        case .yValueNoDeimcals:
+            addLeftOfDecimal(number)
+            
+        case .xValueAwaitingDecimals:
+            state = .xValueWithDecimals
+            addRightOfDecfimal(number)
+            
+        case .yValueAwaitingDecimals:
+            state = . yValueWithDecimals
+            addRightOfDecfimal(number)
+        
+            
+        case .xValueWithDecimals: fallthrough
+        case .yValueWithDecimals:
+            addRightOfDecfimal(number)
+            
+        }
+    }
+    
+    private func addLeftOfDecimal(_ number: Double){
+        let newValue = (valueLabel.v * 10) + number
+        if(valueLabel.v >= Double(Int64.max/100)){
+            valueLabel = ValueLabel(0)
+            valueDisplay.setText("E: Too large")
+        }else{
+            valueLabel = ValueLabel(newValue)
+        }
+    }
+    
+    private func addRightOfDecfimal(_ number: Double){
+        decimalMultiplier = decimalMultiplier * 0.1
+        decimalPlaces += 1
+        if(decimalMultiplier < 0.00000000001){
+            valueLabel = ValueLabel(0)
+            valueDisplay.setText("E: Too specific")
+        }else{
+            let newValue = valueLabel.v + (number * decimalMultiplier)
+            valueLabel = ValueLabel(newValue)
         }
     }
     
     @IBAction func decimalButton() {
-        switch decimalState {
-        case .leftOfDecimal:
-            decimalState = .rightOfDecimalAwaitingDecimals
-        case .rightOfDecimalAwaitingDecimals: fallthrough
-        case .rightOfDecimal:
+        switch state {
+        case .xValueNoDeimcals:
+            state = .xValueAwaitingDecimals
+        case .yValueNoDeimcals:
+            state = .yValueAwaitingDecimals
+        case .xValueAwaitingDecimals: fallthrough
+        case .xValueWithDecimals: fallthrough
+        case .yValueAwaitingDecimals: fallthrough
+        case .yValueWithDecimals:
             break
+        case .displayingResult:
+            reset()
+            state = .xValueNoDeimcals
+        case .yValueDisplayingX:
+            reset()
+            acButtonLabel.setTitle("=")
+            state = .yValueNoDeimcals
         }
     }
     
     @IBAction func acButton() {
-        switch acEqualsState{
-            
-        case .enteringX:
-                reset()
-        case .enteringY(let math):
-            guard let xValue = xValue else{
+        switch state {
+        case .xValueNoDeimcals: fallthrough
+        case .xValueAwaitingDecimals: fallthrough
+        case .xValueWithDecimals: fallthrough
+        case .yValueDisplayingX: fallthrough
+        case .displayingResult:
+            reset()
+        case .yValueNoDeimcals: fallthrough
+        case .yValueAwaitingDecimals: fallthrough
+        case .yValueWithDecimals:
+            guard
+                let math = math,
+                let xValue = xValue
+            else{
                 assert(false)
                 return
             }
@@ -190,10 +236,9 @@ class NumberInputInterfaceController: WKInterfaceController {
     private func reset(){
         decimalMultiplier = 1
         decimalPlaces = 0
-        decimalState = .leftOfDecimal
+        state = .xValueNoDeimcals
         valueLabel = ValueLabel(0)
         acButtonLabel.setTitle("AC")
-        acEqualsState = .enteringX
     }
     
     private func toStringWithForcedDecimalPlaces(_ numb: Double, places placesIn: Int? = nil) -> String{
