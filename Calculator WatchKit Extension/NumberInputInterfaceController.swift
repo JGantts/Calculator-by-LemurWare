@@ -11,33 +11,49 @@ import Foundation
 import os.log
 
 class NumberInputInterfaceController: WKInterfaceController {
-    
-    @IBOutlet weak var valueDisplay: WKInterfaceLabel!
-    
     enum NegativeEqualsButtonState{
         case plusMinus
         case equals
     }
-    var negativeEqualsButtonState: NegativeEqualsButtonState = .plusMinus
-    
     enum DecimalState{
         case leftOfDecimal
         case rightOfDecimalInt
         case rightOfDecimalDouble
     }
+    enum AcEqualsState{
+        case enteringX
+        case enteringY(Function)
+    }
+    
+    @IBOutlet weak var valueDisplay: WKInterfaceLabel!
+    @IBOutlet weak var acButtonLabel: WKInterfaceButton!
+    
+    
+    var negativeEqualsButtonState: NegativeEqualsButtonState = .plusMinus
+    
     var decimalState: DecimalState = .leftOfDecimal
     
-    var value: Double = 0{
+    var valueLabel: ValueLabel = ValueLabel(0){
         didSet{
-            let newLabel = String(format: "%.\(decimalPlaces)f", value)
+            
+            let newLabel: String
+            if let temp = valueLabel.label{
+                newLabel = temp
+            }else{
+                newLabel = String(format: "%.\(decimalPlaces)f", valueLabel.v)
+                valueLabel = ValueLabel(valueLabel.v, label: newLabel)
+            }
             valueDisplay.setText(newLabel)
-            let toAnnounce: AnnouncementContentValueUpdate = (value, newLabel)
+            let toAnnounce: AnnouncementContentValueUpdate = (valueLabel.v, newLabel)
             AnnouncementCenter.default.post(name: AnnouncementName.valueUpdate, object: self, userInfo: [0: toAnnounce])
         }
     }
+    var xValue: Double? = nil
     
     var decimalMultiplier: Double = 1
     var decimalPlaces: Int = 0
+    
+    var acEqualsState: AcEqualsState = .enteringX
     
     override init(){
         super.init()
@@ -48,6 +64,22 @@ class NumberInputInterfaceController: WKInterfaceController {
         switch announcement.name{
 
         case AnnouncementName.functionAwaiting:
+            becomeCurrentPage()
+            guard let content = announcement.userInfo?[0] as? AnnouncementContentFunctionAwaiting else{
+                os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
+                return
+            }
+            let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
+            if let toDisplay = result{
+                reset()
+                valueLabel = ValueLabel(toDisplay, label: String(toDisplay))
+            }else{
+                xValue = valueLabel.v
+                acButtonLabel.setTitle("=")
+                acEqualsState = .enteringY(content)
+                valueLabel = ValueLabel(0.0, label: valueLabel.label)
+            }
+            
             break
 
         default:
@@ -107,12 +139,12 @@ class NumberInputInterfaceController: WKInterfaceController {
         switch decimalState {
             
         case .leftOfDecimal:
-            let newValue = (value * 10) + number
-            if(value >= Double(Int64.max/100)){
-                value = 0
+            let newValue = (valueLabel.v * 10) + number
+            if(valueLabel.v >= Double(Int64.max/100)){
+                valueLabel = ValueLabel(0)
                 valueDisplay.setText("E: Too large")
             }else{
-                value = newValue
+                valueLabel = ValueLabel(newValue)
             }
             
         case .rightOfDecimalDouble: fallthrough
@@ -120,11 +152,11 @@ class NumberInputInterfaceController: WKInterfaceController {
             decimalMultiplier = decimalMultiplier * 0.1
             decimalPlaces += 1
             if(decimalMultiplier < 0.00000000001){
-                value = 0
+                valueLabel = ValueLabel(0)
                 valueDisplay.setText("E: Too specific")
             }else{
-                let newValue = value + (number * decimalMultiplier)
-                value = newValue
+                let newValue = valueLabel.v + (number * decimalMultiplier)
+                valueLabel = ValueLabel(newValue)
             }
             
         }
@@ -142,14 +174,27 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     @IBAction func acButton() {
-        reset()
+        switch acEqualsState{
+            
+        case .enteringX:
+                reset()
+        case .enteringY(let math):
+            guard let xValue = xValue else{
+                assert(false)
+                return
+            }
+            let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
+            reset()
+            valueLabel = ValueLabel(result, label: String(result))
+        }
     }
     
     private func reset(){
         decimalMultiplier = 1
         decimalPlaces = 0
         decimalState = .leftOfDecimal
-        value = 0
-        
+        valueLabel = ValueLabel(0)
+        acButtonLabel.setTitle("AC")
+        acEqualsState = .enteringX
     }
 }

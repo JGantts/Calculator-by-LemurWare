@@ -144,7 +144,7 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="negativeEqualsButtonLabel" destination="Uuv-sq-Xwp" id="b05-gr-4Q3"/>
+                        <outlet property="acButtonLabel" destination="Uuv-sq-Xwp" id="H3C-HG-ncm"/>
                         <outlet property="valueDisplay" destination="hrS-Yq-IPP" id="nbn-2o-kat"/>
                         <segue destination="kku-4O-tAe" kind="relationship" relationship="nextPage" id="DQY-Xt-hCq"/>
                     </connections>

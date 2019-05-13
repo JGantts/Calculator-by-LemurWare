@@ -24,6 +24,8 @@
 		034D7FEB2287EB6B001BB103 /* BasicFunctionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FEA2287EB6B001BB103 /* BasicFunctionInterfaceController.swift */; };
 		034D7FED2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FEC2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift */; };
 		034D7FEF2287EC9B001BB103 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FEE2287EC9B001BB103 /* Functions.swift */; };
+		035C8E5E2288FD6A00EF10F5 /* MathDoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C8E5D2288FD6A00EF10F5 /* MathDoer.swift */; };
+		035C8E60228902AC00EF10F5 /* ValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035C8E5F228902AC00EF10F5 /* ValueLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		034D7FEA2287EB6B001BB103 /* BasicFunctionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFunctionInterfaceController.swift; sourceTree = "<group>"; };
 		034D7FEC2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigFunctionsInterfaceController.swift; sourceTree = "<group>"; };
 		034D7FEE2287EC9B001BB103 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		035C8E5D2288FD6A00EF10F5 /* MathDoer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathDoer.swift; sourceTree = "<group>"; };
+		035C8E5F228902AC00EF10F5 /* ValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 				034D7FD12287D678001BB103 /* NumberInputInterfaceController.swift */,
 				034D7FEA2287EB6B001BB103 /* BasicFunctionInterfaceController.swift */,
 				034D7FEC2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift */,
+				035C8E5D2288FD6A00EF10F5 /* MathDoer.swift */,
 				034D7FD32287D678001BB103 /* ExtensionDelegate.swift */,
 				034D7FD52287D678001BB103 /* ComplicationController.swift */,
 				034D7FD72287D679001BB103 /* Assets.xcassets */,
@@ -173,6 +178,7 @@
 			children = (
 				034D7FE82287E982001BB103 /* Announcements.swift */,
 				034D7FEE2287EC9B001BB103 /* Functions.swift */,
+				035C8E5F228902AC00EF10F5 /* ValueLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -322,7 +328,9 @@
 				034D7FED2287EC0D001BB103 /* TrigFunctionsInterfaceController.swift in Sources */,
 				034D7FD42287D678001BB103 /* ExtensionDelegate.swift in Sources */,
 				034D7FEF2287EC9B001BB103 /* Functions.swift in Sources */,
+				035C8E60228902AC00EF10F5 /* ValueLabel.swift in Sources */,
 				034D7FEB2287EB6B001BB103 /* BasicFunctionInterfaceController.swift in Sources */,
+				035C8E5E2288FD6A00EF10F5 /* MathDoer.swift in Sources */,
 				034D7FD22287D678001BB103 /* NumberInputInterfaceController.swift in Sources */,
 				034D7FD62287D678001BB103 /* ComplicationController.swift in Sources */,
 			);
