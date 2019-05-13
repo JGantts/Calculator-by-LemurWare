@@ -8,10 +8,36 @@
 
 import WatchKit
 import Foundation
-
+import os.log
 
 class BasicFunctionInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var valueLabel: WKInterfaceLabel!
+    
+    var value: Double = 0
+    
+    override init(){
+        super.init()
+        AnnouncementCenter.default.addObserver(self, selector: #selector(self.receivedAnnouncement), name: AnnouncementName.valueUpdate, object: nil)
+    }
+    
+    @objc func receivedAnnouncement(announcement: Announcement){
+        switch announcement.name{
+            
+        case AnnouncementName.valueUpdate:
+            guard let content = announcement.userInfo?[0] as? AnnouncementContentValueUpdate else{
+                os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
+                return
+            }
+            value = content.value
+            valueLabel.setText(content.label)
+            
+        default:
+            os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
+            break
+        }
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,4 +54,27 @@ class BasicFunctionInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func plusButton() {
+        announce(.plus)
+    }
+    @IBAction func minusButton() {
+        announce(.minus)
+    }
+    @IBAction func multiplyButton() {
+        announce(.multiply)
+    }
+    @IBAction func dividedByButton() {
+        announce(.divide)
+    }
+    @IBAction func percentButton() {
+        announce(.percent)
+    }
+    @IBAction func tipButton() {
+        announce(.tip)
+    }
+    
+    private func announce(_ toAnnounce: AnnouncementContentFunctionAwaiting){
+        AnnouncementCenter.default.post(name: AnnouncementName.functionAwaiting, object: self, userInfo: [0: toAnnounce])
+    }
+    
 }

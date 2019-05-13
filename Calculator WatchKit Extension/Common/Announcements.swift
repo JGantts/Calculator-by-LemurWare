@@ -11,7 +11,7 @@ import Foundation
 typealias AnnouncementCenter = NotificationCenter
 typealias Announcement = NSNotification
 
-typealias AnnouncementContentValueUpdate = Int
+typealias AnnouncementContentValueUpdate = (value: Double, label: String)
 typealias AnnouncementContentFunctionAwaiting = Function
 
 enum AnnouncementName{

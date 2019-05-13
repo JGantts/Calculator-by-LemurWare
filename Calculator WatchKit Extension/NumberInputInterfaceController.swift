@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import os.log
 
 class NumberInputInterfaceController: WKInterfaceController {
     
@@ -29,17 +29,32 @@ class NumberInputInterfaceController: WKInterfaceController {
     
     var value: Double = 0{
         didSet{
-            if value == 0{
-                decimalMultiplier = 1
-                decimalPlaces = 0
-                decimalState = .leftOfDecimal
-            }
-            valueDisplay.setText(String(format: "%.\(decimalPlaces)f", value))
+            let newLabel = String(format: "%.\(decimalPlaces)f", value)
+            valueDisplay.setText(newLabel)
+            let toAnnounce: AnnouncementContentValueUpdate = (value, newLabel)
+            AnnouncementCenter.default.post(name: AnnouncementName.valueUpdate, object: self, userInfo: [0: toAnnounce])
         }
     }
     
     var decimalMultiplier: Double = 1
     var decimalPlaces: Int = 0
+    
+    override init(){
+        super.init()
+        AnnouncementCenter.default.addObserver(self, selector: #selector(self.receivedAnnouncement), name: AnnouncementName.functionAwaiting, object: nil)
+    }
+    
+    @objc func receivedAnnouncement(announcement: Announcement){
+        switch announcement.name{
+
+        case AnnouncementName.functionAwaiting:
+            break
+
+        default:
+            os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
+            break
+        }
+    }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -127,6 +142,14 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     @IBAction func acButton() {
+        reset()
+    }
+    
+    private func reset(){
+        decimalMultiplier = 1
+        decimalPlaces = 0
+        decimalState = .leftOfDecimal
         value = 0
+        
     }
 }

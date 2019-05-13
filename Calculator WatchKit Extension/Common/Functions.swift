@@ -8,11 +8,21 @@
 
 import Foundation
 
+enum RadDeg{
+    case rad
+    case deg
+}
+
 enum Function{
-    case times
-    case dividedBy
     case plus
     case minus
+    case multiply
+    case divide
+    case percent
+    case tip
     case toTheYthRoot
     case toThePowerOfY
+    case sin(RadDeg)
+    case cos(RadDeg)
+    case tan(RadDeg)
 }
