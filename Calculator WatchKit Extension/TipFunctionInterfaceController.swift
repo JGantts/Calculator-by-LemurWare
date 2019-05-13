@@ -33,7 +33,7 @@ class TipFunctionInterfaceController: WKInterfaceController {
             assert(false)
             return
         }
-        value.setText(valueLabel.label)
+        value.setText(toString(valueLabel.v))
         five_tip.setText(toString(valueLabel.v * 0.05))
         five_total.setText(toString(valueLabel.v * 1.05))
         ten_tip.setText(toString(valueLabel.v * 0.1))

@@ -12,6 +12,7 @@ import os.log
 
 class NumberInputInterfaceController: WKInterfaceController {
     enum DecimalState{
+        case displayingResult
         case leftOfDecimal
         case rightOfDecimalAwaitingDecimals
         case rightOfDecimal
