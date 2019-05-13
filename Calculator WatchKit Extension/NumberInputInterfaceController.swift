@@ -40,7 +40,7 @@ class NumberInputInterfaceController: WKInterfaceController {
             if let temp = valueLabel.label{
                 newLabel = temp
             }else{
-                newLabel = String(format: "%.\(decimalPlaces)f", valueLabel.v)
+                newLabel = toStringWithForcedDecimalPlaces(valueLabel.v)
                 valueLabel = ValueLabel(valueLabel.v, label: newLabel)
             }
             valueDisplay.setText(newLabel)
@@ -72,12 +72,14 @@ class NumberInputInterfaceController: WKInterfaceController {
             let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
             if let toDisplay = result{
                 reset()
-                valueLabel = ValueLabel(toDisplay, label: String(toDisplay))
+                valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
             }else{
                 xValue = valueLabel.v
+                let labelTemp = valueLabel.label
+                reset()
                 acButtonLabel.setTitle("=")
                 acEqualsState = .enteringY(content)
-                valueLabel = ValueLabel(0.0, label: valueLabel.label)
+                valueLabel = ValueLabel(0.0, label: labelTemp)
             }
             
             break
@@ -185,7 +187,7 @@ class NumberInputInterfaceController: WKInterfaceController {
             }
             let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
             reset()
-            valueLabel = ValueLabel(result, label: String(result))
+            valueLabel = ValueLabel(result, label: toStringWithOwnDecimalPlaces(result))
         }
     }
     
@@ -196,5 +198,14 @@ class NumberInputInterfaceController: WKInterfaceController {
         valueLabel = ValueLabel(0)
         acButtonLabel.setTitle("AC")
         acEqualsState = .enteringX
+    }
+    
+    private func toStringWithForcedDecimalPlaces(_ numb: Double, places placesIn: Int? = nil) -> String{
+        let places: Int = placesIn ?? self.decimalPlaces
+        return String(format: "%.\(places)f", numb)
+    }
+    
+    private func toStringWithOwnDecimalPlaces(_ numb: Double) -> String{
+        return toStringWithForcedDecimalPlaces(numb, places: 10)
     }
 }
