@@ -206,15 +206,6 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     private func toStringWithOwnDecimalPlaces(_ numb: Double) -> String{
-        var places = 0.0
-        while(
-            (Double(Int64(numb * pow(10.0, places)))
-            != numb * pow(10.0, places))
-            && places <= 13
-            ){
-            places += 1
-        }
-        
-        return toStringWithForcedDecimalPlaces(numb, places: Int(places))
+        return(NSDecimalNumber(decimal: Decimal(numb)).stringValue)
     }
 }
