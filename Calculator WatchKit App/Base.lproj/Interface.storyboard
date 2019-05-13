@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Db2-Kc-h4D">
     <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,23 +11,152 @@
     </dependencies>
     <scenes>
         <!--Calculator-->
+        <scene sceneID="BrF-WR-0Q5">
+            <objects>
+                <controller title="Calculator" hidesWhenLoading="NO" fullBounds="YES" id="Db2-Kc-h4D" customClass="InitializerInterfaceController" customModule="Calculator_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="23" alignment="left" textAlignment="right" id="CsC-tQ-agv">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <group width="1" height="1" heightAdjustment="-23" alignment="left" layout="vertical" radius="0.0" spacing="1" id="RCw-8m-x0o">
+                            <items>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="Ljb-td-f5k">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="swF-Tq-rxS">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="sevenButton" destination="AgC-eL-Hgc" id="IVc-nb-fY5"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" id="pZR-t1-KiC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="eightButton" destination="AgC-eL-Hgc" id="E3j-ec-dBW"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="p7X-EI-TlL">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="nineButton" destination="AgC-eL-Hgc" id="EGi-ms-PNm"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="dCT-58-V30">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="iKy-ta-JaC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="fourButton" destination="AgC-eL-Hgc" id="yNu-Aw-Pm4"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" id="pGC-uP-BIU">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="fiveButton" destination="AgC-eL-Hgc" id="IYR-Or-ArN"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="jK4-TM-o5H">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="sixButton" destination="AgC-eL-Hgc" id="cme-Jr-L9J"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="70V-B7-6xf">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="Qdj-8g-9Gs">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="oneButton" destination="AgC-eL-Hgc" id="dEL-Pg-Sxq"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" id="e1q-zT-Xxh">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="twoButton" destination="AgC-eL-Hgc" id="NMb-tG-umR"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" id="ttA-Qg-IzW">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="threeButton" destination="AgC-eL-Hgc" id="nq9-bN-0h8"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="RwA-d2-TZw">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="right" id="AlA-EW-p8k">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonHighlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                            <connections>
+                                                <action selector="acButton" destination="AgC-eL-Hgc" id="mch-56-MS3"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="right" id="2zT-Zi-tE5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="zeroButton" destination="AgC-eL-Hgc" id="r8s-zT-3I4"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="right" id="Gh8-Ra-uxU">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="decimalButton" destination="AgC-eL-Hgc" id="nqj-eW-IOI"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="89" y="-156"/>
+        </scene>
+        <!--Calculator-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Calculator" spacing="0.0" fullBounds="YES" id="AgC-eL-Hgc" customClass="NumberInputInterfaceController" customModule="Calculator_WatchKit_Extension">
+                <controller identifier="NumberInput" title="Calculator" spacing="0.0" hidesWhenLoading="NO" fullBounds="YES" id="AgC-eL-Hgc" customClass="NumberInputInterfaceController" customModule="Calculator_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="7be-4Q-UXa">
                             <items>
                                 <label width="1" height="23" alignment="left" text="0" textAlignment="right" id="hrS-Yq-IPP">
                                     <fontDescription key="font" type="system" pointSize="23"/>
                                 </label>
-                                <group width="1" height="1" heightAdjustment="-23" alignment="left" layout="vertical" spacing="1" id="CZu-Le-QfK">
+                                <group width="1" height="1" heightAdjustment="-23" alignment="left" layout="vertical" radius="0.0" spacing="1" id="CZu-Le-QfK">
                                     <items>
                                         <group width="1" height="0.25" alignment="left" spacing="1" id="rxh-lg-icU">
                                             <items>
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="7" id="vGR-WI-hOH">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="sevenButton" destination="AgC-eL-Hgc" id="e16-a8-Xpi"/>
                                                     </connections>
@@ -35,7 +164,7 @@
                                                 <button width="0.33400000000000002" height="1" alignment="left" title="8" id="uCD-M9-nJk">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="eightButton" destination="AgC-eL-Hgc" id="PHK-Wd-C66"/>
                                                     </connections>
@@ -43,7 +172,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="9" id="5im-Pa-nGh">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="nineButton" destination="AgC-eL-Hgc" id="ad1-Ye-UJO"/>
                                                     </connections>
@@ -55,7 +184,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="4" id="cVi-59-XDd">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="fourButton" destination="AgC-eL-Hgc" id="tVR-wR-3JR"/>
                                                     </connections>
@@ -63,7 +192,7 @@
                                                 <button width="0.33400000000000002" height="1" alignment="left" title="5" id="dsR-KB-bGB">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="fiveButton" destination="AgC-eL-Hgc" id="Ska-yf-WlV"/>
                                                     </connections>
@@ -71,7 +200,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="6" id="gHd-Vf-5xr">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="sixButton" destination="AgC-eL-Hgc" id="lA9-Cm-VcA"/>
                                                     </connections>
@@ -83,7 +212,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="1" id="hmv-FM-7Qi">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="oneButton" destination="AgC-eL-Hgc" id="fzB-E5-i0V"/>
                                                     </connections>
@@ -91,7 +220,7 @@
                                                 <button width="0.33400000000000002" height="1" alignment="left" title="2" id="stg-w8-0yr">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="twoButton" destination="AgC-eL-Hgc" id="T5E-3w-jqh"/>
                                                     </connections>
@@ -99,7 +228,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="left" title="3" id="RNg-au-jFI">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="threeButton" destination="AgC-eL-Hgc" id="el3-Bz-IOp"/>
                                                     </connections>
@@ -111,7 +240,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="right" title="AC" id="Uuv-sq-Xwp">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonHighlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
                                                     <connections>
                                                         <action selector="acButton" destination="AgC-eL-Hgc" id="yrU-FB-yFC"/>
                                                     </connections>
@@ -119,7 +248,7 @@
                                                 <button width="0.33400000000000002" height="1" alignment="right" title="0" id="qMM-o7-heH">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="zeroButton" destination="AgC-eL-Hgc" id="lOn-xt-BSw"/>
                                                     </connections>
@@ -127,7 +256,7 @@
                                                 <button width="0.33300000000000002" height="1" alignment="right" title="." id="7zB-vv-u7R">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
-                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="decimalButton" destination="AgC-eL-Hgc" id="CzC-Id-zuy"/>
                                                     </connections>
@@ -146,16 +275,144 @@
                     <connections>
                         <outlet property="acButtonLabel" destination="Uuv-sq-Xwp" id="H3C-HG-ncm"/>
                         <outlet property="valueDisplay" destination="hrS-Yq-IPP" id="nbn-2o-kat"/>
-                        <segue destination="kku-4O-tAe" kind="relationship" relationship="nextPage" id="DQY-Xt-hCq"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="89" y="102"/>
         </scene>
+        <!--Done-->
+        <scene sceneID="1SL-a8-D6O">
+            <objects>
+                <controller identifier="TipFunction" title="Done" hidesWhenLoading="NO" fullBounds="YES" id="9j5-fq-fud">
+                    <items>
+                        <label width="1" height="23" alignment="left" text="0" textAlignment="right" id="8xk-N8-m8n">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <group width="1" height="1" heightAdjustment="-23" alignment="left" layout="vertical" radius="0.0" spacing="1" id="aSe-or-25z">
+                            <items>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="1iM-51-hTe">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="7" id="6rB-Wd-gmk">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="sevenButton" destination="AgC-eL-Hgc" id="mKo-ar-cNn"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" title="8" id="g2g-J4-06N">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="eightButton" destination="AgC-eL-Hgc" id="aej-VC-qQZ"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="9" id="PPY-EA-Hco">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="nineButton" destination="AgC-eL-Hgc" id="Bwb-QF-0l3"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="r6i-Cn-hgz">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="4" id="zHF-ue-rjZ">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="fourButton" destination="AgC-eL-Hgc" id="EGD-kG-7g2"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" title="5" id="Go9-pu-uoT">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="fiveButton" destination="AgC-eL-Hgc" id="IAZ-vy-M6i"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="6" id="Ow5-Zu-wnO">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="sixButton" destination="AgC-eL-Hgc" id="LO3-4q-AzF"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="Z1R-xz-Vio">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="1" id="3x6-nV-FNc">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="oneButton" destination="AgC-eL-Hgc" id="GD5-C3-fvp"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="left" title="2" id="TQE-34-5L6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="twoButton" destination="AgC-eL-Hgc" id="wMS-Jb-EXb"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33300000000000002" height="1" alignment="left" title="3" id="JZP-31-T4H">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="threeButton" destination="AgC-eL-Hgc" id="0hf-uj-OLw"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.25" alignment="left" spacing="1" id="Ymr-xM-key">
+                                    <items>
+                                        <button width="0.33300000000000002" height="1" alignment="right" title="AC" id="vAs-dy-Fz2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonHighlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                            <connections>
+                                                <action selector="acButton" destination="AgC-eL-Hgc" id="T1S-yR-2AS"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33400000000000002" height="1" alignment="right" title="0" id="RQc-Yj-Tx8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="zeroButton" destination="AgC-eL-Hgc" id="k42-VZ-gXa"/>
+                                            </connections>
+                                        </button>
+                                        <button width="60" height="1" alignment="right" title="." id="y6l-70-9ua">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="buttonLowlight"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                            <connections>
+                                                <action selector="decimalButton" destination="AgC-eL-Hgc" id="qyO-92-jGh"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="87.956521739130423" y="372.63392857142856"/>
+        </scene>
         <!--Calculator-->
         <scene sceneID="ekq-bW-HOG">
             <objects>
-                <controller title="Calculator" spacing="1" fullBounds="YES" id="kku-4O-tAe" customClass="BasicFunctionInterfaceController" customModule="Calculator_WatchKit_Extension">
+                <controller identifier="BasicFunctions" title="Calculator" spacing="1" hidesWhenLoading="NO" fullBounds="YES" id="kku-4O-tAe" customClass="BasicFunctionInterfaceController" customModule="Calculator_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="gum-X1-6cz">
                             <items>
@@ -168,7 +425,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="%" id="Ttb-J1-hMI">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="buttonLowlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="percentButton" destination="kku-4O-tAe" id="LwA-7y-qdh"/>
@@ -186,7 +443,7 @@
                                         </group>
                                         <group width="1" height="0.33329999999999999" alignment="left" spacing="1" id="Qn8-bE-xHt">
                                             <items>
-                                                <button width="0.5" height="1" alignment="left" title="X" id="0vj-Eq-Rvy">
+                                                <button width="0.5" height="1" alignment="left" title="x" id="0vj-Eq-Rvy">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
@@ -194,7 +451,7 @@
                                                         <action selector="multiplyButton" destination="kku-4O-tAe" id="lVb-LK-4bK"/>
                                                     </connections>
                                                 </button>
-                                                <button width="0.5" height="1" alignment="left" title="/" id="Pyk-8O-maN">
+                                                <button width="0.5" height="1" alignment="left" title="÷" id="Pyk-8O-maN">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
@@ -235,7 +492,6 @@
                     </items>
                     <connections>
                         <outlet property="valueLabel" destination="rVB-px-vkw" id="LQf-Tg-tGK"/>
-                        <segue destination="3a8-Jv-qp7" kind="relationship" relationship="nextPage" id="qwh-dI-LCX"/>
                     </connections>
                 </controller>
             </objects>
@@ -244,7 +500,7 @@
         <!--Calculator-->
         <scene sceneID="5Pv-WH-qgO">
             <objects>
-                <controller title="Calculator" spacing="1" fullBounds="YES" id="3a8-Jv-qp7" customClass="TrigFunctionsInterfaceController" customModule="Calculator_WatchKit_Extension">
+                <controller identifier="TrigFunctions" title="Calculator" spacing="1" hidesWhenLoading="NO" fullBounds="YES" id="3a8-Jv-qp7" customClass="TrigFunctionsInterfaceController" customModule="Calculator_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="sjK-Uv-gYa">
                             <items>
@@ -257,14 +513,16 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="Deg" id="Amm-LC-155">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="radDegButton" destination="3a8-Jv-qp7" id="rXM-5e-6tr"/>
                                                     </connections>
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="tan" id="SnS-gP-yDj">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="tanButton" destination="3a8-Jv-qp7" id="CS5-XN-vxH"/>
                                                     </connections>
@@ -275,14 +533,16 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="sin" id="NQR-iQ-bS0">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="sinButton" destination="3a8-Jv-qp7" id="4rV-jQ-EAX"/>
                                                     </connections>
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="cos" id="q70-c5-oOR">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="cosButton" destination="3a8-Jv-qp7" id="tmQ-xh-DfM"/>
                                                     </connections>
@@ -291,16 +551,18 @@
                                         </group>
                                         <group width="1" height="0.33329999999999999" alignment="left" spacing="1" id="AXB-q8-wXJ">
                                             <items>
-                                                <button width="0.5" height="1" alignment="left" title="YrootX" id="WYt-cj-jtz">
+                                                <button width="0.5" height="1" alignment="left" title="ʸ√x" id="WYt-cj-jtz">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="yRootXButton" destination="3a8-Jv-qp7" id="9df-PE-Lrw"/>
                                                     </connections>
                                                 </button>
-                                                <button width="0.5" height="1" alignment="left" title="x^y" id="SkV-Cb-WHj">
+                                                <button width="0.5" height="1" alignment="left" title="xʸ" id="SkV-Cb-WHj">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="xTotheY" destination="3a8-Jv-qp7" id="JHy-AN-DYC"/>
                                                     </connections>
@@ -322,7 +584,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="106"/>
+            <point key="canvasLocation" x="-169" y="102"/>
         </scene>
     </scenes>
     <resources>

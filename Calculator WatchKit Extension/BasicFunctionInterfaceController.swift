@@ -70,6 +70,7 @@ class BasicFunctionInterfaceController: WKInterfaceController {
         announce(.percent)
     }
     @IBAction func tipButton() {
+        presentController(withName: "TipFunction", context: valueLabel)
         announce(.tip)
     }
     

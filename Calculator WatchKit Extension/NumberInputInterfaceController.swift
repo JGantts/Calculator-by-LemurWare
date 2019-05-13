@@ -57,6 +57,7 @@ class NumberInputInterfaceController: WKInterfaceController {
     
     override init(){
         super.init()
+        
         AnnouncementCenter.default.addObserver(self, selector: #selector(self.receivedAnnouncement), name: AnnouncementName.functionAwaiting, object: nil)
     }
     
@@ -69,24 +70,26 @@ class NumberInputInterfaceController: WKInterfaceController {
                 os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
                 return
             }
-            let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
-            if let toDisplay = result{
-                reset()
-                valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
-            }else{
-                xValue = valueLabel.v
-                let labelTemp = valueLabel.label
-                reset()
-                acButtonLabel.setTitle("=")
-                acEqualsState = .enteringY(content)
-                valueLabel = ValueLabel(0.0, label: labelTemp)
+            switch content{
+            case .tip:
+                break
+            default:
+                let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
+                if let toDisplay = result{
+                    reset()
+                    valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
+                }else{
+                    xValue = valueLabel.v
+                    let labelTemp = valueLabel.label
+                    reset()
+                    acButtonLabel.setTitle("=")
+                    acEqualsState = .enteringY(content)
+                    valueLabel = ValueLabel(0.0, label: labelTemp)
+                }
             }
-            
-            break
 
         default:
             os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
-            break
         }
     }
     
@@ -206,6 +209,12 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     private func toStringWithOwnDecimalPlaces(_ numb: Double) -> String{
+        if
+            numb < 00.0000000000001 &&
+            numb > -0.0000000000001
+        {
+            return "0"
+        }
         return(NSDecimalNumber(decimal: Decimal(numb)).stringValue)
     }
 }

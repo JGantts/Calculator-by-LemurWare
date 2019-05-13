@@ -49,7 +49,8 @@ class MathDoer{
             }
             
         case .tip:
-            return nil
+            assert(false)
+            return 0
         }
     }
     
