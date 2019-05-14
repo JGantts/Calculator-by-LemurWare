@@ -18,11 +18,9 @@ class MathDoer{
         case .multiply: fallthrough
         case .divide: fallthrough
         case .toTheYthRoot: fallthrough
-        case .toThePowerOfY:
-            return nil
-            
+        case .toThePowerOfY: fallthrough
         case .percent:
-            return xValue/100.0
+            return nil
             
         case .sin(let radDeg):
             switch radDeg{
@@ -79,7 +77,9 @@ class MathDoer{
         case .toThePowerOfY:
             return pow(xValue, yValue)
             
-        case .percent:  fallthrough
+        case .percent:
+            return xValue * yValue / 100.0
+            
         case .sin:      fallthrough
         case .cos:      fallthrough
         case .tan:      fallthrough
