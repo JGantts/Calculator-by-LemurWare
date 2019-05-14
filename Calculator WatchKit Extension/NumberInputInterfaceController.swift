@@ -87,22 +87,15 @@ class NumberInputInterfaceController: WKInterfaceController {
         }
     }
     
+    @objc func goToSettings(){
+        presentController(withName: "Settings", context: nil)
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+        addMenuItem(with: .more, title: "Credits", action: #selector(self.goToSettings))
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
     @IBAction func zeroButton() {
         numberButton(0)
     }
