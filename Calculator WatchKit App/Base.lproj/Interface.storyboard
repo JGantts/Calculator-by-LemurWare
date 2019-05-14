@@ -155,7 +155,7 @@
                                             <items>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="7" id="vGR-WI-hOH">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -166,7 +166,7 @@
                                                 </button>
                                                 <button width="0.33400000000000002" height="1" alignment="center" verticalAlignment="center" title="8" id="uCD-M9-nJk">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -177,7 +177,7 @@
                                                 </button>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="9" id="5im-Pa-nGh">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -192,7 +192,7 @@
                                             <items>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="4" id="cVi-59-XDd">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -203,7 +203,7 @@
                                                 </button>
                                                 <button width="0.33400000000000002" height="1" alignment="center" verticalAlignment="center" title="5" id="dsR-KB-bGB">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -214,7 +214,7 @@
                                                 </button>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="6" id="gHd-Vf-5xr">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -229,7 +229,7 @@
                                             <items>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="1" id="hmv-FM-7Qi">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -240,7 +240,7 @@
                                                 </button>
                                                 <button width="0.33400000000000002" height="1" alignment="center" verticalAlignment="center" title="2" id="stg-w8-0yr">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -251,7 +251,7 @@
                                                 </button>
                                                 <button width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" title="3" id="RNg-au-jFI">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -266,7 +266,7 @@
                                             <items>
                                                 <button width="0.33300000000000002" height="1" alignment="right" title="AC" id="Uuv-sq-Xwp">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="highlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
@@ -277,7 +277,7 @@
                                                 </button>
                                                 <button width="0.33400000000000002" height="1" alignment="right" title="0" id="qMM-o7-heH">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -288,7 +288,7 @@
                                                 </button>
                                                 <button width="0.33300000000000002" height="1" alignment="right" title="." id="7zB-vv-u7R">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
@@ -345,7 +345,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonLowlight"/>
+                            <color key="backgroundColor" name="button"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="mgK-CI-LV1">
                             <items>
@@ -368,7 +368,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonHighlight"/>
+                            <color key="backgroundColor" name="highlight"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="OTH-zT-ly4">
                             <items>
@@ -391,7 +391,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonLowlight"/>
+                            <color key="backgroundColor" name="button"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="TJQ-pC-QfR">
                             <items>
@@ -414,7 +414,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonHighlight"/>
+                            <color key="backgroundColor" name="highlight"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="BFK-UB-35Z">
                             <items>
@@ -437,7 +437,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonLowlight"/>
+                            <color key="backgroundColor" name="button"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="dOx-Sz-DaI">
                             <items>
@@ -460,7 +460,7 @@
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="buttonHighlight"/>
+                            <color key="backgroundColor" name="highlight"/>
                         </group>
                     </items>
                     <connections>
@@ -498,7 +498,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="%" id="Ttb-J1-hMI">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="percentButton" destination="kku-4O-tAe" id="LwA-7y-qdh"/>
@@ -506,7 +506,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="Tip" id="3aA-wC-rxt">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="highlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -521,7 +521,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="x" id="0vj-Eq-Rvy">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="multiplyButton" destination="kku-4O-tAe" id="lVb-LK-4bK"/>
@@ -529,7 +529,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="÷" id="Pyk-8O-maN">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="dividedByButton" destination="kku-4O-tAe" id="lFv-8w-53X"/>
@@ -541,7 +541,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="+" id="Oqr-x2-7lA">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="plusButton" destination="kku-4O-tAe" id="m56-HV-ukY"/>
@@ -549,7 +549,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="-" id="QCi-Oo-Wmy">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <connections>
                                                         <action selector="minusButton" destination="kku-4O-tAe" id="fO0-fO-8X6"/>
@@ -589,7 +589,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="Deg" id="Amm-LC-155">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonHighlight"/>
+                                                    <color key="backgroundColor" name="highlight"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -600,7 +600,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="tan" id="SnS-gP-yDj">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -615,7 +615,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="sin" id="NQR-iQ-bS0">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -626,7 +626,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="cos" id="q70-c5-oOR">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -641,7 +641,7 @@
                                             <items>
                                                 <button width="0.5" height="1" alignment="left" title="ʸ√x" id="WYt-cj-jtz">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -652,7 +652,7 @@
                                                 </button>
                                                 <button width="0.5" height="1" alignment="left" title="xʸ" id="SkV-Cb-WHj">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="backgroundColor" name="buttonLowlight"/>
+                                                    <color key="backgroundColor" name="button"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
@@ -738,11 +738,17 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="button">
+            <color red="0.48627450980392156" green="0.59999999999999998" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="buttonHighlight">
             <color red="0.94499999284744263" green="0.37599998712539673" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonLowlight">
             <color red="0.33333333333333331" green="0.58823529411764708" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="highlight">
+            <color red="0.94509803921568625" green="0.37647058823529411" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
