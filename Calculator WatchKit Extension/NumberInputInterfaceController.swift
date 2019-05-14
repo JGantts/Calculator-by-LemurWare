@@ -205,7 +205,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         case .yValueDisplayingX:
             reset()
             acButtonLabel.setTitle("=")
-            state = .yValueNoDeimcals
+            state = .yValueAwaitingDecimals
         }
     }
     

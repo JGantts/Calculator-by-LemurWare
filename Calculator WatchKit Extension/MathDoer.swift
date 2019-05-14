@@ -74,10 +74,10 @@ class MathDoer{
             }
             
         case .toTheYthRoot:
-            return pow(xValue, yValue)
+            return pow(xValue, 1.0/yValue)
             
         case .toThePowerOfY:
-            return pow(xValue, 1.0/yValue)
+            return pow(xValue, yValue)
             
         case .percent:  fallthrough
         case .sin:      fallthrough
