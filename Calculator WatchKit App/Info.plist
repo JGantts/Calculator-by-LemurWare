@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>tech.lemurware.Calculator</string>
+	<string>tech.lemurware.calculator</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

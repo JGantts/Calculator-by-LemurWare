@@ -515,7 +515,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -537,7 +537,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -556,7 +556,7 @@
 				DEVELOPMENT_TEAM = 5X2TWJNH44;
 				IBSC_MODULE = Calculator_WatchKit_Extension;
 				INFOPLIST_FILE = "Calculator WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -575,7 +575,7 @@
 				DEVELOPMENT_TEAM = 5X2TWJNH44;
 				IBSC_MODULE = Calculator_WatchKit_Extension;
 				INFOPLIST_FILE = "Calculator WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -596,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -614,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
