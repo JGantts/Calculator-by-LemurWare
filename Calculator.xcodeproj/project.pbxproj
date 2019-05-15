@@ -11,7 +11,6 @@
 		030D513D2289F61B0076C693 /* TipFunctionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D513C2289F61B0076C693 /* TipFunctionInterfaceController.swift */; };
 		034D7FAF2287D675001BB103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FAE2287D675001BB103 /* AppDelegate.swift */; };
 		034D7FB12287D675001BB103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D7FB02287D675001BB103 /* ViewController.swift */; };
-		034D7FB42287D675001BB103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D7FB22287D675001BB103 /* Main.storyboard */; };
 		034D7FB62287D677001BB103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034D7FB52287D677001BB103 /* Assets.xcassets */; };
 		034D7FB92287D677001BB103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D7FB72287D677001BB103 /* LaunchScreen.storyboard */; };
 		034D7FBE2287D677001BB103 /* Calculator WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 034D7FBD2287D677001BB103 /* Calculator WatchKit App.app */; };
@@ -78,7 +77,6 @@
 		034D7FAB2287D675001BB103 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034D7FAE2287D675001BB103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034D7FB02287D675001BB103 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		034D7FB32287D675001BB103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		034D7FB52287D677001BB103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		034D7FB82287D677001BB103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		034D7FBA2287D677001BB103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 			children = (
 				034D7FAE2287D675001BB103 /* AppDelegate.swift */,
 				034D7FB02287D675001BB103 /* ViewController.swift */,
-				034D7FB22287D675001BB103 /* Main.storyboard */,
 				034D7FB52287D677001BB103 /* Assets.xcassets */,
 				034D7FB72287D677001BB103 /* LaunchScreen.storyboard */,
 				034D7FBA2287D677001BB103 /* Info.plist */,
@@ -293,7 +290,6 @@
 			files = (
 				034D7FB92287D677001BB103 /* LaunchScreen.storyboard in Resources */,
 				034D7FB62287D677001BB103 /* Assets.xcassets in Resources */,
-				034D7FB42287D675001BB103 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,14 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		034D7FB22287D675001BB103 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				034D7FB32287D675001BB103 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		034D7FB72287D677001BB103 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -521,7 +509,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -543,7 +531,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -562,7 +550,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -581,7 +569,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -592,6 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X2TWJNH44;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,7 +588,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X2TWJNH44;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +607,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.lemurware.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
