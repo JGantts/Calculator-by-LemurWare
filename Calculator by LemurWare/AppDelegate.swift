@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Calculator
+//  Calculator by LemurWare
 //
-//  Created by Jacob Gantt on 5/12/19.
+//  Created by Jacob Gantt on 5/16/19.
 //  Copyright © 2019 LemurWare LLC. All rights reserved.
 //
 

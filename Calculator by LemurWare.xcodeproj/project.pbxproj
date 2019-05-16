@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03476240228D223E00451B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0347623F228D223E00451B4C /* AppDelegate.swift */; };
+		03476242228D223E00451B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03476241228D223E00451B4C /* ViewController.swift */; };
+		03476247228D223F00451B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03476246228D223F00451B4C /* Assets.xcassets */; };
+		0347624A228D223F00451B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03476248228D223F00451B4C /* LaunchScreen.storyboard */; };
+		0347624F228D223F00451B4C /* Calculator by LemurWare WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0347624E228D223F00451B4C /* Calculator by LemurWare WatchKit App.app */; };
+		03476255228D223F00451B4C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03476253228D223F00451B4C /* Interface.storyboard */; };
+		03476257228D223F00451B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03476256228D223F00451B4C /* Assets.xcassets */; };
+		0347625E228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0347625D228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03476269228D224000451B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03476268228D224000451B4C /* Assets.xcassets */; };
+		03E6E757228D38A100D16D41 /* InitializerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E756228D38A100D16D41 /* InitializerInterfaceController.swift */; };
+		03E6E761228D38EC00D16D41 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75A228D38EC00D16D41 /* ComplicationController.swift */; };
+		03E6E762228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75B228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift */; };
+		03E6E763228D38EC00D16D41 /* TipFunctionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75C228D38EC00D16D41 /* TipFunctionInterfaceController.swift */; };
+		03E6E764228D38EC00D16D41 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75D228D38EC00D16D41 /* ExtensionDelegate.swift */; };
+		03E6E765228D38EC00D16D41 /* MathDoer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75E228D38EC00D16D41 /* MathDoer.swift */; };
+		03E6E766228D38EC00D16D41 /* NumberInputInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E75F228D38EC00D16D41 /* NumberInputInterfaceController.swift */; };
+		03E6E767228D38EC00D16D41 /* BasicFunctionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E760228D38EC00D16D41 /* BasicFunctionInterfaceController.swift */; };
+		03E6E76C228D390100D16D41 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E769228D390100D16D41 /* Announcements.swift */; };
+		03E6E76D228D390100D16D41 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E76A228D390100D16D41 /* Functions.swift */; };
+		03E6E76E228D390100D16D41 /* ValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E76B228D390100D16D41 /* ValueLabel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03476250228D223F00451B4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03476234228D223E00451B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0347624D228D223F00451B4C;
+			remoteInfo = "Calculator by LemurWare WatchKit App";
+		};
+		0347625F228D223F00451B4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03476234228D223E00451B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0347625C228D223F00451B4C;
+			remoteInfo = "Calculator by LemurWare WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03476270228D224000451B4C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0347625E228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03476274228D224000451B4C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0347624F228D223F00451B4C /* Calculator by LemurWare WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0347623C228D223E00451B4C /* Calculator by LemurWare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator by LemurWare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0347623F228D223E00451B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03476241228D223E00451B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03476246228D223F00451B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03476249228D223F00451B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0347624B228D223F00451B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0347624E228D223F00451B4C /* Calculator by LemurWare WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator by LemurWare WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03476254228D223F00451B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		03476256228D223F00451B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03476258228D223F00451B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0347625D228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Calculator by LemurWare WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03476268228D224000451B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0347626A228D224000451B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E6E756228D38A100D16D41 /* InitializerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerInterfaceController.swift; sourceTree = "<group>"; };
+		03E6E75A228D38EC00D16D41 /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		03E6E75B228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigFunctionsInterfaceController.swift; sourceTree = "<group>"; };
+		03E6E75C228D38EC00D16D41 /* TipFunctionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipFunctionInterfaceController.swift; sourceTree = "<group>"; };
+		03E6E75D228D38EC00D16D41 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		03E6E75E228D38EC00D16D41 /* MathDoer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathDoer.swift; sourceTree = "<group>"; };
+		03E6E75F228D38EC00D16D41 /* NumberInputInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInputInterfaceController.swift; sourceTree = "<group>"; };
+		03E6E760228D38EC00D16D41 /* BasicFunctionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicFunctionInterfaceController.swift; sourceTree = "<group>"; };
+		03E6E769228D390100D16D41 /* Announcements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
+		03E6E76A228D390100D16D41 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		03E6E76B228D390100D16D41 /* ValueLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueLabel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03476239228D223E00451B4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0347625A228D223F00451B4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03476233228D223E00451B4C = {
+			isa = PBXGroup;
+			children = (
+				0347623E228D223E00451B4C /* Calculator by LemurWare */,
+				03476252228D223F00451B4C /* Calculator by LemurWare WatchKit App */,
+				03476261228D223F00451B4C /* Calculator by LemurWare WatchKit Extension */,
+				0347623D228D223E00451B4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0347623D228D223E00451B4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0347623C228D223E00451B4C /* Calculator by LemurWare.app */,
+				0347624E228D223F00451B4C /* Calculator by LemurWare WatchKit App.app */,
+				0347625D228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0347623E228D223E00451B4C /* Calculator by LemurWare */ = {
+			isa = PBXGroup;
+			children = (
+				0347623F228D223E00451B4C /* AppDelegate.swift */,
+				03476241228D223E00451B4C /* ViewController.swift */,
+				03476246228D223F00451B4C /* Assets.xcassets */,
+				03476248228D223F00451B4C /* LaunchScreen.storyboard */,
+				0347624B228D223F00451B4C /* Info.plist */,
+			);
+			path = "Calculator by LemurWare";
+			sourceTree = "<group>";
+		};
+		03476252228D223F00451B4C /* Calculator by LemurWare WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				03476253228D223F00451B4C /* Interface.storyboard */,
+				03476256228D223F00451B4C /* Assets.xcassets */,
+				03476258228D223F00451B4C /* Info.plist */,
+			);
+			path = "Calculator by LemurWare WatchKit App";
+			sourceTree = "<group>";
+		};
+		03476261228D223F00451B4C /* Calculator by LemurWare WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03E6E756228D38A100D16D41 /* InitializerInterfaceController.swift */,
+				03E6E768228D390100D16D41 /* Common */,
+				03E6E760228D38EC00D16D41 /* BasicFunctionInterfaceController.swift */,
+				03E6E75A228D38EC00D16D41 /* ComplicationController.swift */,
+				03E6E75D228D38EC00D16D41 /* ExtensionDelegate.swift */,
+				03E6E75E228D38EC00D16D41 /* MathDoer.swift */,
+				03E6E75F228D38EC00D16D41 /* NumberInputInterfaceController.swift */,
+				03E6E75C228D38EC00D16D41 /* TipFunctionInterfaceController.swift */,
+				03E6E75B228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift */,
+				03476268228D224000451B4C /* Assets.xcassets */,
+				0347626A228D224000451B4C /* Info.plist */,
+			);
+			path = "Calculator by LemurWare WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		03E6E768228D390100D16D41 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				03E6E769228D390100D16D41 /* Announcements.swift */,
+				03E6E76A228D390100D16D41 /* Functions.swift */,
+				03E6E76B228D390100D16D41 /* ValueLabel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0347623B228D223E00451B4C /* Calculator by LemurWare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03476275228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare" */;
+			buildPhases = (
+				03476238228D223E00451B4C /* Sources */,
+				03476239228D223E00451B4C /* Frameworks */,
+				0347623A228D223E00451B4C /* Resources */,
+				03476274228D224000451B4C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03476251228D223F00451B4C /* PBXTargetDependency */,
+			);
+			name = "Calculator by LemurWare";
+			productName = "Calculator by LemurWare";
+			productReference = 0347623C228D223E00451B4C /* Calculator by LemurWare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0347624D228D223F00451B4C /* Calculator by LemurWare WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03476271228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare WatchKit App" */;
+			buildPhases = (
+				0347624C228D223F00451B4C /* Resources */,
+				03476270228D224000451B4C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03476260228D223F00451B4C /* PBXTargetDependency */,
+			);
+			name = "Calculator by LemurWare WatchKit App";
+			productName = "Calculator by LemurWare WatchKit App";
+			productReference = 0347624E228D223F00451B4C /* Calculator by LemurWare WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0347625C228D223F00451B4C /* Calculator by LemurWare WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0347626D228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare WatchKit Extension" */;
+			buildPhases = (
+				03476259228D223F00451B4C /* Sources */,
+				0347625A228D223F00451B4C /* Frameworks */,
+				0347625B228D223F00451B4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Calculator by LemurWare WatchKit Extension";
+			productName = "Calculator by LemurWare WatchKit Extension";
+			productReference = 0347625D228D223F00451B4C /* Calculator by LemurWare WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03476234228D223E00451B4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "LemurWare LLC";
+				TargetAttributes = {
+					0347623B228D223E00451B4C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					0347624D228D223F00451B4C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					0347625C228D223F00451B4C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 03476237228D223E00451B4C /* Build configuration list for PBXProject "Calculator by LemurWare" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03476233228D223E00451B4C;
+			productRefGroup = 0347623D228D223E00451B4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0347623B228D223E00451B4C /* Calculator by LemurWare */,
+				0347624D228D223F00451B4C /* Calculator by LemurWare WatchKit App */,
+				0347625C228D223F00451B4C /* Calculator by LemurWare WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0347623A228D223E00451B4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0347624A228D223F00451B4C /* LaunchScreen.storyboard in Resources */,
+				03476247228D223F00451B4C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0347624C228D223F00451B4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03476257228D223F00451B4C /* Assets.xcassets in Resources */,
+				03476255228D223F00451B4C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0347625B228D223F00451B4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03476269228D224000451B4C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03476238228D223E00451B4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03476242228D223E00451B4C /* ViewController.swift in Sources */,
+				03476240228D223E00451B4C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03476259228D223F00451B4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E6E76E228D390100D16D41 /* ValueLabel.swift in Sources */,
+				03E6E766228D38EC00D16D41 /* NumberInputInterfaceController.swift in Sources */,
+				03E6E764228D38EC00D16D41 /* ExtensionDelegate.swift in Sources */,
+				03E6E757228D38A100D16D41 /* InitializerInterfaceController.swift in Sources */,
+				03E6E76D228D390100D16D41 /* Functions.swift in Sources */,
+				03E6E762228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift in Sources */,
+				03E6E761228D38EC00D16D41 /* ComplicationController.swift in Sources */,
+				03E6E763228D38EC00D16D41 /* TipFunctionInterfaceController.swift in Sources */,
+				03E6E767228D38EC00D16D41 /* BasicFunctionInterfaceController.swift in Sources */,
+				03E6E765228D38EC00D16D41 /* MathDoer.swift in Sources */,
+				03E6E76C228D390100D16D41 /* Announcements.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03476251228D223F00451B4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0347624D228D223F00451B4C /* Calculator by LemurWare WatchKit App */;
+			targetProxy = 03476250228D223F00451B4C /* PBXContainerItemProxy */;
+		};
+		03476260228D223F00451B4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0347625C228D223F00451B4C /* Calculator by LemurWare WatchKit Extension */;
+			targetProxy = 0347625F228D223F00451B4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03476248228D223F00451B4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03476249228D223F00451B4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		03476253228D223F00451B4C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03476254228D223F00451B4C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0347626B228D224000451B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0347626C228D224000451B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0347626E228D224000451B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				INFOPLIST_FILE = "Calculator by LemurWare WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		0347626F228D224000451B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				INFOPLIST_FILE = "Calculator by LemurWare WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		03476272228D224000451B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				IBSC_MODULE = Calculator_by_LemurWare_WatchKit_Extension;
+				INFOPLIST_FILE = "Calculator by LemurWare WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		03476273228D224000451B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				IBSC_MODULE = Calculator_by_LemurWare_WatchKit_Extension;
+				INFOPLIST_FILE = "Calculator by LemurWare WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		03476276228D224000451B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				INFOPLIST_FILE = "Calculator by LemurWare/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03476277228D224000451B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X2TWJNH44;
+				INFOPLIST_FILE = "Calculator by LemurWare/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.lemurware.Calculator-by-LemurWare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03476237228D223E00451B4C /* Build configuration list for PBXProject "Calculator by LemurWare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0347626B228D224000451B4C /* Debug */,
+				0347626C228D224000451B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0347626D228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0347626E228D224000451B4C /* Debug */,
+				0347626F228D224000451B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03476271228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03476272228D224000451B4C /* Debug */,
+				03476273228D224000451B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03476275228D224000451B4C /* Build configuration list for PBXNativeTarget "Calculator by LemurWare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03476276228D224000451B4C /* Debug */,
+				03476277228D224000451B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03476234228D223E00451B4C /* Project object */;
+}
