@@ -163,13 +163,13 @@
 			children = (
 				03E6E756228D38A100D16D41 /* InitializerInterfaceController.swift */,
 				03E6E768228D390100D16D41 /* Common */,
+				03E6E75F228D38EC00D16D41 /* NumberInputInterfaceController.swift */,
 				03E6E760228D38EC00D16D41 /* BasicFunctionInterfaceController.swift */,
+				03E6E75B228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift */,
+				03E6E75C228D38EC00D16D41 /* TipFunctionInterfaceController.swift */,
+				03E6E75E228D38EC00D16D41 /* MathDoer.swift */,
 				03E6E75A228D38EC00D16D41 /* ComplicationController.swift */,
 				03E6E75D228D38EC00D16D41 /* ExtensionDelegate.swift */,
-				03E6E75E228D38EC00D16D41 /* MathDoer.swift */,
-				03E6E75F228D38EC00D16D41 /* NumberInputInterfaceController.swift */,
-				03E6E75C228D38EC00D16D41 /* TipFunctionInterfaceController.swift */,
-				03E6E75B228D38EC00D16D41 /* TrigFunctionsInterfaceController.swift */,
 				03476268228D224000451B4C /* Assets.xcassets */,
 				0347626A228D224000451B4C /* Info.plist */,
 			);
