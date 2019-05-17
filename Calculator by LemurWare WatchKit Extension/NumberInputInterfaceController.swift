@@ -19,7 +19,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         case yValueNoDeimcals (xValue: Double, math: Function)
         case yValueAwaitingDecimals (xValue: Double, math: Function)
         case yValueWithDecimals (xValue: Double, math: Function)
-        case displayingResult (result: Double)
+        case displayingResult
     }
 
     
@@ -232,11 +232,12 @@ class NumberInputInterfaceController: WKInterfaceController {
         if let toDisplay = result{
             reset()
             valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
+            state = .displayingResult
         }else{
-            let labelTemp = valueLabel.label
+            let valueLabelTemp = valueLabel
             reset()
-            state = .yValueDisplayingX(xValue: valueLabel.v, math: math)
-            valueLabel = ValueLabel(0.0, label: labelTemp)
+            state = .yValueDisplayingX(xValue: valueLabelTemp.v, math: math)
+            valueLabel = ValueLabel(0.0, label: valueLabelTemp.label)
         }
         
     }
@@ -245,6 +246,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
         reset()
         valueLabel = ValueLabel(result, label: toStringWithOwnDecimalPlaces(result))
+        state = .displayingResult
     }
     
     private func reset(){
