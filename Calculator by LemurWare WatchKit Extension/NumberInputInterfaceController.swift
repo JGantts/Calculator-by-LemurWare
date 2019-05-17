@@ -263,6 +263,12 @@ class NumberInputInterfaceController: WKInterfaceController {
     }
     
     private func toStringWithOwnDecimalPlaces(_ numb: Decimal) -> String{
+        if
+            numb < 00.0000000000001 &&
+                numb > -0.0000000000001
+        {
+            return "0"
+        }
         return(NSDecimalNumber(decimal: numb).stringValue)
     }
 }
