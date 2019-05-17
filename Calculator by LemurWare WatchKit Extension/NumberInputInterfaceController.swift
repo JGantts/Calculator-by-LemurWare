@@ -76,8 +76,12 @@ class NumberInputInterfaceController: WKInterfaceController {
                 case .yValueDisplayingX(let xValue, _):
                     state = .yValueDisplayingX(xValue: xValue, math: announcementMath)
                     
-                case .yValueNoDeimcals(let xValue, let math): fallthrough
-                case .yValueAwaitingDecimals(let xValue, let math): fallthrough
+                case .yValueNoDeimcals(let xValue, let math):
+                    doTwoVaraible(xValue: xValue, math: math)
+                    tryOneVariable(math: announcementMath)
+                case .yValueAwaitingDecimals(let xValue, let math):
+                    doTwoVaraible(xValue: xValue, math: math)
+                    tryOneVariable(math: announcementMath)
                 case .yValueWithDecimals(let xValue, let math):
                     doTwoVaraible(xValue: xValue, math: math)
                     tryOneVariable(math: announcementMath)
@@ -214,8 +218,10 @@ class NumberInputInterfaceController: WKInterfaceController {
         case .yValueDisplayingX: fallthrough
         case .displayingResult:
             reset()
-        case .yValueNoDeimcals(let xValue, let math): fallthrough
-        case .yValueAwaitingDecimals(let xValue, let math): fallthrough
+        case .yValueNoDeimcals(let xValue, let math):
+            doTwoVaraible(xValue: xValue, math: math)
+        case .yValueAwaitingDecimals(let xValue, let math):
+            doTwoVaraible(xValue: xValue, math: math)
         case .yValueWithDecimals(let xValue, let math):
             doTwoVaraible(xValue: xValue, math: math)
         }
