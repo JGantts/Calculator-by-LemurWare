@@ -747,4 +747,5 @@
             <color red="0.94117647058823528" green="0.47843137254901963" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" red="0.94509803920000002" green="0.37647058820000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
