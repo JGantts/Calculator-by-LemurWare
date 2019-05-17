@@ -687,7 +687,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="8BX-LG-NqU">
                             <items>
-                                <label alignment="center" text="Calculator v1.0" textAlignment="left" id="74K-8I-D3V"/>
+                                <label alignment="center" text="Calculator v1.1" textAlignment="left" id="74K-8I-D3V"/>
                                 <label alignment="center" text="Thank you for using the Calculator. We sincerly hope it helps you out." textAlignment="center" numberOfLines="12" id="LRx-5f-693"/>
                                 <separator width="1" alignment="left" id="jgS-SH-3g2"/>
                                 <label alignment="center" text="https://lemurware.tech/calculator" textAlignment="center" numberOfLines="3" id="k4X-1G-eED">
