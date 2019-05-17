@@ -15,9 +15,11 @@ class NumberInputInterfaceController: WKInterfaceController {
         case xValueNoDeimcals
         case xValueAwaitingDecimals
         case xValueWithDecimals
-        case yValueDisplayingX
-        case yValueNoDeimcals
-        case yValueAwaitingDecimals
+        case yValueDisplayingX (xValue: Double, math: Function)
+        case yValueNoDeimcals (xValue: Double, math: Function)
+        case yValueAwaitingDecimals (xValue: Double, math: Function)
+        case yValueWithDecimals (xValue: Double, math: Function)
+        case displayingResult (result: Double)
     }
 
     
@@ -39,8 +41,6 @@ class NumberInputInterfaceController: WKInterfaceController {
             AnnouncementCenter.default.post(name: AnnouncementName.valueUpdate, object: self, userInfo: [0: toAnnounce])
         }
     }
-    var xValue: Double? = nil
-    var math: Function? = nil
     
     var decimalMultiplier: Double = 1
     var decimalPlaces: Int = 0
@@ -58,25 +58,32 @@ class NumberInputInterfaceController: WKInterfaceController {
 
         case AnnouncementName.functionAwaiting:
             becomeCurrentPage()
-            guard let content = announcement.userInfo?[0] as? AnnouncementContentFunctionAwaiting else{
+            guard let announcementMath = announcement.userInfo?[0] as? AnnouncementContentFunctionAwaiting else{
                 os_log("Received unrecognized Announcement", log: OSLog.default, type: .error)
                 return
             }
-            switch content{
+            switch announcementMath{
             case .tip:
                 reset()
             default:
-                let result = MathDoer.tryWithX(content, xValue: valueLabel.v)
-                if let toDisplay = result{
-                    reset()
-                    valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
-                }else{
-                    xValue = valueLabel.v
-                    math = content
-                    let labelTemp = valueLabel.label
-                    reset()
-                    state = .yValueDisplayingX
-                    valueLabel = ValueLabel(0.0, label: labelTemp)
+                switch state{
+                    
+                case .xValueNoDeimcals: fallthrough
+                case .xValueAwaitingDecimals: fallthrough
+                case .xValueWithDecimals:
+                    tryOneVariable(math: announcementMath)
+                    
+                case .yValueDisplayingX(let xValue, _):
+                    state = .yValueDisplayingX(xValue: xValue, math: announcementMath)
+                    
+                case .yValueNoDeimcals(let xValue, let math): fallthrough
+                case .yValueAwaitingDecimals(let xValue, let math): fallthrough
+                case .yValueWithDecimals(let xValue, let math):
+                    doTwoVaraible(xValue: xValue, math: math)
+                    tryOneVariable(math: announcementMath)
+                    
+                case .displayingResult:
+                    tryOneVariable(math: announcementMath)
                 }
             }
 
@@ -132,9 +139,9 @@ class NumberInputInterfaceController: WKInterfaceController {
             reset()
             addLeftOfDecimal(number)
             
-        case .yValueDisplayingX:
+        case .yValueDisplayingX(let xValue, let math):
             acButtonLabel.setTitle("=")
-            state = .yValueNoDeimcals
+            state = .yValueNoDeimcals(xValue: xValue, math: math)
             addLeftOfDecimal(number)
             
         case .xValueNoDeimcals: fallthrough
@@ -145,11 +152,10 @@ class NumberInputInterfaceController: WKInterfaceController {
             state = .xValueWithDecimals
             addRightOfDecfimal(number)
             
-        case .yValueAwaitingDecimals:
-            state = . yValueWithDecimals
+        case .yValueAwaitingDecimals(let xValue, let math):
+            state = . yValueWithDecimals(xValue: xValue, math: math)
             addRightOfDecfimal(number)
         
-            
         case .xValueWithDecimals: fallthrough
         case .yValueWithDecimals:
             addRightOfDecfimal(number)
@@ -183,8 +189,8 @@ class NumberInputInterfaceController: WKInterfaceController {
         switch state {
         case .xValueNoDeimcals:
             state = .xValueAwaitingDecimals
-        case .yValueNoDeimcals:
-            state = .yValueAwaitingDecimals
+        case .yValueNoDeimcals(let xValue, let math):
+            state = .yValueAwaitingDecimals(xValue: xValue, math: math)
         case .xValueAwaitingDecimals: fallthrough
         case .xValueWithDecimals: fallthrough
         case .yValueAwaitingDecimals: fallthrough
@@ -193,10 +199,10 @@ class NumberInputInterfaceController: WKInterfaceController {
         case .displayingResult:
             reset()
             state = .xValueNoDeimcals
-        case .yValueDisplayingX:
+        case .yValueDisplayingX(let xValue, let math):
             reset()
             acButtonLabel.setTitle("=")
-            state = .yValueAwaitingDecimals
+            state = .yValueAwaitingDecimals(xValue: xValue, math: math)
         }
     }
     
@@ -208,27 +214,38 @@ class NumberInputInterfaceController: WKInterfaceController {
         case .yValueDisplayingX: fallthrough
         case .displayingResult:
             reset()
-        case .yValueNoDeimcals: fallthrough
-        case .yValueAwaitingDecimals: fallthrough
-        case .yValueWithDecimals:
-            guard
-                let math = math,
-                let xValue = xValue
-            else{
-                assert(false)
-                return
-            }
-            let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
-            reset()
-            valueLabel = ValueLabel(result, label: toStringWithOwnDecimalPlaces(result))
+        case .yValueNoDeimcals(let xValue, let math): fallthrough
+        case .yValueAwaitingDecimals(let xValue, let math): fallthrough
+        case .yValueWithDecimals(let xValue, let math):
+            doTwoVaraible(xValue: xValue, math: math)
         }
     }
     
+    private func tryOneVariable(math: Function){
+        let result = MathDoer.tryWithX(math, xValue: valueLabel.v)
+        if let toDisplay = result{
+            reset()
+            valueLabel = ValueLabel(0.0, label: toStringWithOwnDecimalPlaces(toDisplay))
+        }else{
+            let labelTemp = valueLabel.label
+            reset()
+            state = .yValueDisplayingX(xValue: valueLabel.v, math: math)
+            valueLabel = ValueLabel(0.0, label: labelTemp)
+        }
+        
+    }
+    
+    private func doTwoVaraible(xValue: Double, math: Function){
+        let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
+        reset()
+        valueLabel = ValueLabel(result, label: toStringWithOwnDecimalPlaces(result))
+    }
+    
     private func reset(){
+        valueLabel = ValueLabel(0)
         decimalMultiplier = 1
         decimalPlaces = 0
         state = .xValueNoDeimcals
-        valueLabel = ValueLabel(0)
         acButtonLabel.setTitle("AC")
     }
     
