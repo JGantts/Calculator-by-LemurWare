@@ -51,8 +51,8 @@ class TipFunctionInterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
     
-    private func toString(_ numb: Double) -> String{
-        return String(format: "$%.2f", numb)
+    private func toString(_ numb: Decimal) -> String{
+        return String(format: "$%.2f", NSDecimalNumber(decimal: numb).doubleValue)
     }
 
 }

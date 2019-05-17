@@ -15,7 +15,7 @@ class TrigFunctionsInterfaceController: WKInterfaceController {
     @IBOutlet weak var valueLabel: WKInterfaceLabel!
     @IBOutlet weak var radDedButtonLabel: WKInterfaceButton!
     
-    var value: Double = 0
+    var value: Decimal = 0
     var radDeg: RadDeg = .deg {
         didSet{
             switch radDeg {

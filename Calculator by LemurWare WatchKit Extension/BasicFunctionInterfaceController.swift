@@ -14,7 +14,7 @@ class BasicFunctionInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var valueLabelDisplay: WKInterfaceLabel!
     
-    var value: Double = 0
+    var value: Decimal = 0
     var valueLabel = ValueLabel(0)
     
     override init(){

@@ -10,7 +10,10 @@ import Foundation
 
 class MathDoer{
     
-    static func tryWithX(_ math: Function, xValue: Double) -> Double?{
+    static func tryWithX(_ math: Function, xValue: Decimal) -> Decimal?{
+        
+        let xDouble = NSDecimalNumber(decimal: xValue).doubleValue
+        
         switch math{
             
         case .plus: fallthrough
@@ -25,25 +28,25 @@ class MathDoer{
         case .sin(let radDeg):
             switch radDeg{
             case .rad:
-                return sin(xValue * Double.pi / 180)
+                return Decimal(sin(xDouble * Double.pi / 180))
             case .deg:
-                return sin(xValue * Double.pi / 180)
+                return Decimal(sin(xDouble * Double.pi / 180))
             }
             
         case .cos(let radDeg):
             switch radDeg{
             case .rad:
-                return cos(xValue * Double.pi / 180)
+                return Decimal(cos(xDouble * Double.pi / 180))
             case .deg:
-                return cos(xValue * Double.pi / 180)
+                return Decimal(cos(xDouble * Double.pi / 180))
             }
             
         case .tan(let radDeg):
             switch radDeg{
             case .rad:
-                return tan(xValue * Double.pi / 180)
+                return Decimal(tan(xDouble * Double.pi / 180))
             case .deg:
-                return tan(xValue * Double.pi / 180)
+                return Decimal(tan(xDouble * Double.pi / 180))
             }
             
         case .tip:
@@ -52,7 +55,11 @@ class MathDoer{
         }
     }
     
-    static func tryWithXAndY(_ math: Function, xValue: Double, yValue: Double) -> Double{
+    static func tryWithXAndY(_ math: Function, xValue: Decimal, yValue: Decimal) -> Decimal{
+        
+        let yDouble = NSDecimalNumber(decimal: yValue).doubleValue
+        let xDouble = NSDecimalNumber(decimal: xValue).doubleValue
+        
         switch math{
             
         case .plus:
@@ -72,10 +79,10 @@ class MathDoer{
             }
             
         case .toTheYthRoot:
-            return pow(xValue, 1.0/yValue)
+            return Decimal(pow(xDouble, 1.0/yDouble))
             
         case .toThePowerOfY:
-            return pow(xValue, yValue)
+            return Decimal(pow(xDouble, yDouble))
             
         case .percent:
             return xValue * yValue / 100.0

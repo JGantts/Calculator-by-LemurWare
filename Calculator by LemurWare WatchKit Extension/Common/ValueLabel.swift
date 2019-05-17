@@ -9,10 +9,10 @@
 import Foundation
 
 struct ValueLabel{
-    let v: Double
+    let v: Decimal
     var label: String?
     
-    init(_ value: Double, label: String? = nil){
+    init(_ value: Decimal, label: String? = nil){
         self.v = value
         self.label = label
     }

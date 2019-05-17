@@ -15,10 +15,10 @@ class NumberInputInterfaceController: WKInterfaceController {
         case xValueNoDeimcals
         case xValueAwaitingDecimals
         case xValueWithDecimals
-        case yValueDisplayingX (xValue: Double, math: Function)
-        case yValueNoDeimcals (xValue: Double, math: Function)
-        case yValueAwaitingDecimals (xValue: Double, math: Function)
-        case yValueWithDecimals (xValue: Double, math: Function)
+        case yValueDisplayingX (xValue: Decimal, math: Function)
+        case yValueNoDeimcals (xValue: Decimal, math: Function)
+        case yValueAwaitingDecimals (xValue: Decimal, math: Function)
+        case yValueWithDecimals (xValue: Decimal, math: Function)
         case displayingResult
     }
 
@@ -42,7 +42,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         }
     }
     
-    var decimalMultiplier: Double = 1
+    var decimalMultiplier: Decimal = 1
     var decimalPlaces: Int = 0
     
     var state: State = .xValueNoDeimcals
@@ -136,7 +136,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         numberButton(9)
     }
     
-    private func numberButton(_ number: Double){
+    private func numberButton(_ number: Decimal){
         switch state {
             
         case .displayingResult:
@@ -167,17 +167,17 @@ class NumberInputInterfaceController: WKInterfaceController {
         }
     }
     
-    private func addLeftOfDecimal(_ number: Double){
+    private func addLeftOfDecimal(_ number: Decimal){
         let newValue = (valueLabel.v * 10) + number
-        if(valueLabel.v >= Double(Int64.max/100)){
+        if(valueLabel.v >= Decimal.greatestFiniteMagnitude/100){
             valueLabel = ValueLabel(0)
-            valueDisplay.setText("E: Too large")
+            valueDisplay.setText(String(NSDecimalMaxSize))
         }else{
             valueLabel = ValueLabel(newValue)
         }
     }
     
-    private func addRightOfDecfimal(_ number: Double){
+    private func addRightOfDecfimal(_ number: Decimal){
         decimalMultiplier = decimalMultiplier * 0.1
         decimalPlaces += 1
         if(decimalMultiplier < 0.00000000001){
@@ -242,7 +242,7 @@ class NumberInputInterfaceController: WKInterfaceController {
         
     }
     
-    private func doTwoVaraible(xValue: Double, math: Function){
+    private func doTwoVaraible(xValue: Decimal, math: Function){
         let result = MathDoer.tryWithXAndY(math, xValue: xValue, yValue: valueLabel.v)
         reset()
         valueLabel = ValueLabel(result, label: toStringWithOwnDecimalPlaces(result))
@@ -257,18 +257,12 @@ class NumberInputInterfaceController: WKInterfaceController {
         acButtonLabel.setTitle("AC")
     }
     
-    private func toStringWithForcedDecimalPlaces(_ numb: Double, places placesIn: Int? = nil) -> String{
+    private func toStringWithForcedDecimalPlaces(_ numb: Decimal, places placesIn: Int? = nil) -> String{
         let places: Int = placesIn ?? self.decimalPlaces
-        return String(format: "%.\(places)f", numb)
+        return String(format: "%.\(places)f", NSDecimalNumber(decimal: numb).doubleValue)
     }
     
-    private func toStringWithOwnDecimalPlaces(_ numb: Double) -> String{
-        if
-            numb < 00.0000000000001 &&
-            numb > -0.0000000000001
-        {
-            return "0"
-        }
-        return(NSDecimalNumber(decimal: Decimal(numb)).stringValue)
+    private func toStringWithOwnDecimalPlaces(_ numb: Decimal) -> String{
+        return(NSDecimalNumber(decimal: numb).stringValue)
     }
 }
