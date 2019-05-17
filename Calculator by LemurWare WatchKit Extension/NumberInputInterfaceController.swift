@@ -18,8 +18,6 @@ class NumberInputInterfaceController: WKInterfaceController {
         case yValueDisplayingX
         case yValueNoDeimcals
         case yValueAwaitingDecimals
-        case yValueWithDecimals
-        case displayingResult
     }
 
     
