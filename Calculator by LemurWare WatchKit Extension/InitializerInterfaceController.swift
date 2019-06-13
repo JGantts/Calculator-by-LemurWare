@@ -14,10 +14,12 @@ class InitializerInterfaceController: WKInterfaceController {
     
     override init(){
         super.init()
-        
+    }
+    
+    override func awake(withContext context: Any?) {
         WKInterfaceController.reloadRootPageControllers(
             withNames: ["TrigFunctions", "NumberInput", "BasicFunctions"],
-            contexts: ["", "", ""],
+            contexts: nil,
             orientation: .horizontal,
             pageIndex: 1)
     }
