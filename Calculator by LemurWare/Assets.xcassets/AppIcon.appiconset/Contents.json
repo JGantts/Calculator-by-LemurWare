@@ -3,49 +3,49 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator40.png",
+      "filename" : "CalculatorIcon40.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator60.png",
+      "filename" : "CalculatorIcon60.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator58-1.png",
+      "filename" : "CalculatorIcon58.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator87.png",
+      "filename" : "CalculatorIcon87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator80.png",
+      "filename" : "CalculatorIcon80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator120.png",
+      "filename" : "CalculatorIcon120.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator120-1.png",
+      "filename" : "CalculatorIcon120-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "IOS-icon-calculator180.png",
+      "filename" : "CalculatorIcon180.png",
       "scale" : "3x"
     },
     {
@@ -105,7 +105,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "IOS-icon-calculator1024.png",
+      "filename" : "CalculatorIcon1024.png",
       "scale" : "1x"
     }
   ],

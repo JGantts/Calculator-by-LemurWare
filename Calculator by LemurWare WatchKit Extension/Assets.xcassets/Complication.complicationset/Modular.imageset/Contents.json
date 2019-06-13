@@ -2,25 +2,25 @@
   "images" : [
     {
       "idiom" : "watch",
-      "filename" : "icon-calculator-silhouette52.png",
+      "filename" : "CalculatorIcon-sil52.png",
       "screen-width" : "<=145",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "icon-calculator-silhouette58.png",
+      "filename" : "CalculatorIcon-sil58.png",
       "screen-width" : ">161",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "icon-calculator-silhouette58-1.png",
+      "filename" : "CalculatorIcon-sil58-1.png",
       "screen-width" : ">145",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "icon-calculator-silhouette64.png",
+      "filename" : "CalculatorIcon-sil64.png",
       "screen-width" : ">183",
       "scale" : "2x"
     }
