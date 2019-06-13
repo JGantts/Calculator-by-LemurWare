@@ -7,7 +7,7 @@
     },
     {
       "idiom" : "watch",
-      "filename" : "watchOS-84.png",
+      "filename" : "CalculatorIcon84.png",
       "screen-width" : ">161",
       "scale" : "2x"
     },
@@ -18,7 +18,7 @@
     },
     {
       "idiom" : "watch",
-      "filename" : "watchOS-94.png",
+      "filename" : "CalculatorIcon94.png",
       "screen-width" : ">183",
       "scale" : "2x"
     }
