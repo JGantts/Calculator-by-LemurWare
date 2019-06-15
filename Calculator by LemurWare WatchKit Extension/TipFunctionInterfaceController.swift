@@ -14,8 +14,6 @@ class TipFunctionInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var value: WKInterfaceLabel!
     
-    @IBOutlet weak var five_tip: WKInterfaceLabel!
-    @IBOutlet weak var five_total: WKInterfaceLabel!
     @IBOutlet weak var ten_tip: WKInterfaceLabel!
     @IBOutlet weak var ten_total: WKInterfaceLabel!
     @IBOutlet weak var fifteen_tip: WKInterfaceLabel!
@@ -34,8 +32,6 @@ class TipFunctionInterfaceController: WKInterfaceController {
             return
         }
         value.setText(toString(valueLabel.v))
-        five_tip.setText(toString(valueLabel.v * 0.05))
-        five_total.setText(toString(valueLabel.v * 1.05))
         ten_tip.setText(toString(valueLabel.v * 0.1))
         ten_total.setText(toString(valueLabel.v * 1.1))
         fifteen_tip.setText(toString(valueLabel.v * 0.15))

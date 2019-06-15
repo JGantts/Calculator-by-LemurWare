@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Db2-Kc-h4D">
-    <device id="watch44" orientation="portrait">
+    <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Calculator-->
@@ -425,150 +424,130 @@
                         <label width="1" height="23" alignment="left" text="0" textAlignment="right" id="8xk-N8-m8n">
                             <fontDescription key="font" type="system" pointSize="23"/>
                         </label>
-                        <group width="1" alignment="left" spacing="1" id="1iM-51-hTe">
+                        <group width="1" alignment="left" spacing="1" id="BFK-UB-35Z">
                             <items>
-                                <label alignment="left" verticalAlignment="center" text="30%" textAlignment="right" id="x1P-1S-43o">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
+                                <label alignment="left" verticalAlignment="center" text="10%" textAlignment="right" id="OJo-kR-oCw">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="34"/>
                                 </label>
-                                <group alignment="right" layout="vertical" id="EXJ-LN-AEO">
+                                <group alignment="right" layout="vertical" id="SvV-KE-8YA">
                                     <items>
-                                        <label alignment="right" text="0" textAlignment="right" id="Hf1-fv-1UT">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        <label alignment="right" text="$23.00" textAlignment="right" id="PNm-kF-LxU">
+                                            <color key="textColor" red="1" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                            </variation>
                                         </label>
-                                        <label alignment="right" verticalAlignment="bottom" text="0" id="Xu0-IK-xCU">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label alignment="right" verticalAlignment="bottom" text="0" id="EQP-DY-lfh">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="button"/>
-                        </group>
-                        <group width="1" alignment="left" spacing="1" id="mgK-CI-LV1">
-                            <items>
-                                <label alignment="left" verticalAlignment="center" text="25%" textAlignment="right" id="QBr-w0-bmj">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
-                                </label>
-                                <group alignment="right" layout="vertical" id="xSF-0O-ii7">
-                                    <items>
-                                        <label alignment="right" text="0" textAlignment="right" id="CdW-xg-p8B">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
-                                        </label>
-                                        <label alignment="right" verticalAlignment="bottom" text="0" id="mri-MV-MRl">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </label>
-                                    </items>
-                                </group>
-                            </items>
-                            <color key="backgroundColor" name="highlight"/>
-                        </group>
-                        <group width="1" alignment="left" spacing="1" id="OTH-zT-ly4">
-                            <items>
-                                <label alignment="left" verticalAlignment="center" text="20%" textAlignment="right" id="j3e-1O-zR0">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
-                                </label>
-                                <group alignment="right" layout="vertical" id="QCy-Y9-Lhs">
-                                    <items>
-                                        <label alignment="right" text="0" textAlignment="right" id="8Cq-e3-x7Y">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
-                                        </label>
-                                        <label alignment="right" verticalAlignment="bottom" text="0" id="Ezb-iw-Bwp">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </label>
-                                    </items>
-                                </group>
-                            </items>
-                            <color key="backgroundColor" name="button"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="7" right="7" top="0.0" bottom="0.0"/>
                         </group>
                         <group width="1" alignment="left" spacing="1" id="TJQ-pC-QfR">
                             <items>
                                 <label alignment="left" verticalAlignment="center" text="15%" textAlignment="right" id="JWI-kW-jNh">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="34"/>
                                 </label>
                                 <group alignment="right" layout="vertical" id="1Lt-TB-VdV">
                                     <items>
                                         <label alignment="right" text="0" textAlignment="right" id="Vz5-Pz-d08">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" red="1" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                            </variation>
                                         </label>
                                         <label alignment="right" verticalAlignment="bottom" text="0" id="tgA-40-ynA">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="highlight"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="7" right="7" top="0.0" bottom="0.0"/>
                         </group>
-                        <group width="1" alignment="left" spacing="1" id="BFK-UB-35Z">
+                        <group width="1" alignment="left" spacing="1" id="OTH-zT-ly4">
                             <items>
-                                <label alignment="left" verticalAlignment="center" text="10%" textAlignment="right" id="OJo-kR-oCw">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
+                                <label alignment="left" verticalAlignment="center" text="20%" textAlignment="right" id="j3e-1O-zR0">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="34"/>
                                 </label>
-                                <group alignment="right" layout="vertical" id="SvV-KE-8YA">
+                                <group alignment="right" layout="vertical" id="QCy-Y9-Lhs">
                                     <items>
-                                        <label alignment="right" text="0" textAlignment="right" id="PNm-kF-LxU">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        <label alignment="right" text="0" textAlignment="right" id="8Cq-e3-x7Y">
+                                            <color key="textColor" red="1" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                            </variation>
                                         </label>
-                                        <label alignment="right" verticalAlignment="bottom" text="0" id="EQP-DY-lfh">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label alignment="right" verticalAlignment="bottom" text="0" id="Ezb-iw-Bwp">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="button"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="7" right="7" top="0.0" bottom="0.0"/>
                         </group>
-                        <group width="1" alignment="left" spacing="1" id="dOx-Sz-DaI">
+                        <group width="1" alignment="left" spacing="1" id="mgK-CI-LV1">
                             <items>
-                                <label alignment="left" verticalAlignment="center" text="5%" textAlignment="right" id="37l-LM-jwF">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                                    <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                    </variation>
+                                <label alignment="left" verticalAlignment="center" text="25%" textAlignment="right" id="QBr-w0-bmj">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="34"/>
                                 </label>
-                                <group alignment="right" layout="vertical" id="6o0-Y2-ueW">
+                                <group alignment="right" layout="vertical" id="xSF-0O-ii7">
                                     <items>
-                                        <label alignment="right" text="0" textAlignment="right" id="Hoa-cC-Sqo">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        <label alignment="right" text="0" textAlignment="right" id="CdW-xg-p8B">
+                                            <color key="textColor" red="1" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                            </variation>
                                         </label>
-                                        <label alignment="right" verticalAlignment="bottom" text="0" id="38d-4c-tC8">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label alignment="right" verticalAlignment="bottom" text="0" id="mri-MV-MRl">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                     </items>
                                 </group>
                             </items>
-                            <color key="backgroundColor" name="highlight"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="7" right="7" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" spacing="1" id="1iM-51-hTe">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="30%" textAlignment="right" id="x1P-1S-43o">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="34"/>
+                                </label>
+                                <group alignment="right" layout="vertical" id="EXJ-LN-AEO">
+                                    <items>
+                                        <label alignment="right" text="0" textAlignment="right" id="Hf1-fv-1UT">
+                                            <color key="textColor" red="1" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="28"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label alignment="right" verticalAlignment="bottom" text="0" id="Xu0-IK-xCU">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" red="0.18823529411764706" green="0.20000000000000001" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="7" right="7" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>
                         <outlet property="fifteen_tip" destination="Vz5-Pz-d08" id="8kf-dV-KVh"/>
                         <outlet property="fifteen_total" destination="tgA-40-ynA" id="gwv-EN-tEI"/>
-                        <outlet property="five_tip" destination="Hoa-cC-Sqo" id="Bkk-wT-p5G"/>
-                        <outlet property="five_total" destination="38d-4c-tC8" id="fWB-YP-ITu"/>
                         <outlet property="ten_tip" destination="PNm-kF-LxU" id="XJY-VK-YRk"/>
                         <outlet property="ten_total" destination="EQP-DY-lfh" id="ovv-rB-Exg"/>
                         <outlet property="thirty_tip" destination="Hf1-fv-1UT" id="jGB-TC-lwZ"/>
@@ -878,13 +857,5 @@
             <point key="canvasLocation" x="-169" y="468"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="button">
-            <color red="0.59607843137254901" green="0.81176470588235294" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="highlight">
-            <color red="0.94117647058823528" green="0.47843137254901963" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
     <color key="tintColor" red="1" green="0.46666666666666667" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
 </document>
