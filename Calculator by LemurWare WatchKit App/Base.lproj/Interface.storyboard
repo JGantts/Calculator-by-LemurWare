@@ -805,7 +805,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="8BX-LG-NqU">
                             <items>
-                                <label alignment="center" text="Calculator v1.1" textAlignment="left" id="74K-8I-D3V"/>
+                                <label alignment="center" text="Calculator v2.0" textAlignment="left" id="74K-8I-D3V"/>
                                 <label alignment="center" text="Thank you for using the Calculator. We sincerly hope it helps you out." textAlignment="center" numberOfLines="12" id="LRx-5f-693"/>
                                 <separator width="1" alignment="left" id="jgS-SH-3g2"/>
                                 <label alignment="center" text="https://lemurware.tech/calculator" textAlignment="center" numberOfLines="3" id="k4X-1G-eED">
@@ -813,6 +813,7 @@
                                 </label>
                                 <separator width="1" alignment="left" id="sgv-Xd-1Ul"/>
                                 <label alignment="center" text="Art by" textAlignment="center" id="arE-HL-gLo"/>
+                                <label alignment="center" text="Szymon Furjan" id="siH-p3-yvk"/>
                                 <label alignment="center" text="Ryan McCown" id="Qet-HI-Ayq"/>
                                 <label alignment="center" text="and" id="2jn-RA-HlD"/>
                                 <label alignment="center" text="Linda Röthlin" id="HCf-Lh-XLl"/>
