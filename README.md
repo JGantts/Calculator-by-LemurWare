@@ -55,9 +55,23 @@ But don't use them, [they are dead to us](https://engineering.vokal.io/iOS/Codin
 - `Calculator by LemurWare` is the iOS version of the app. This is no loger needed for new apps, but existing apps cannot "downgrade" to be an iOS-less app if they were originally published with and iOS companion app.
 - `Calculator by LemurWare WatchKit App` is basically the GUI of the WatchOS app.
 - `Calculator by LemurWare WatchKit Extension` is the code for the WatchOS app.
+
 > Pro tip:
 > 
 > Notice how there's a `.xcassets` folder in ever top-lever folder?
 > Different images go in different folders depending on where they are referenced.
 > iOS goes in the iOS folder. Anything referenced by the watchOS GUI directly goes in the `WatchKit App` folder but anything referenced by watchOS code goes in the `WatchKit App Extension` folder.
 
+###### InitializerInterfaceController
+This is the "entry point" of the calculator.
+In `WatchKit App`'s `Interface.storyboard` a loading screen is defined as the initial screen.
+Its backend code is `InitializerInterfaceController`.
+`InitializerInterfaceController`'s `awake` function does only one thing, reload the screen with the proper 3 screens, starting with the middle screen.
+
+###### NumberInputInterfaceController
+This is the initial screen the user sees.
+It features all 10 digit, a display for the number, a clear/total button, and a decimal button.
+
+On the backend, there are 2 hooks for the UI (`valueDisplay`, `acButtonLabel`), 2 variables storing info about the decimal places entered, and a `state` variable.
+
+###### TrigFunctionsInterfaceController
