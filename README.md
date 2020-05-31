@@ -16,6 +16,8 @@ It is assumed that the reader knows basics about the Watch like what the [crown]
 It is also assumed that the reader knows the basics of at least one programming language.
 It would help is this language were [Swift](https://www.apple.com/swift/), but almost any language would do.
 E.g. Javascript, C#, C, and Java are all fine.
+This guide also assumes the reader is familiar with Xcode.
+Deep familiarity is not needed, but the guide will not cover installing or maintaining Xcode.
 
 #### Swift basics for somewhat-knowledgeable programmers.
 Siwft is Apple's languge for iOS, Mac, Apple TV, and Apple Watch.
@@ -50,5 +52,12 @@ Semicolons are optional, and can but used very much as is C# or JavaScript.
 But don't use them, [they are dead to us](https://engineering.vokal.io/iOS/CodingStandards/Swift.md.html#semicolons).
 
 #### High-Level Structure
-
+- `Calculator by LemurWare` is the iOS version of the app. This is no loger needed for new apps, but existing apps cannot "downgrade" to be an iOS-less app if they were originally published with and iOS companion app.
+- `Calculator by LemurWare WatchKit App` is basically the GUI of the WatchOS app.
+- `Calculator by LemurWare WatchKit Extension` is the code for the WatchOS app.
+> Pro tip:
+> 
+> Notice how there's a `.xcassets` folder in ever top-lever folder?
+> Different images go in different folders depending on where they are referenced.
+> iOS goes in the iOS folder. Anything referenced by the watchOS GUI directly goes in the `WatchKit App` folder but anything referenced by watchOS code goes in the `WatchKit App Extension` folder.
 
