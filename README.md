@@ -28,7 +28,7 @@ let myConstantPi = 3.14
 var myChangingCounter: Int = 0
 ```
 This is simple, but flexible.
-E.g. when deciding whether to take an umbrella, we need to check severl states in a convoluted way.
+E.g. when deciding whether to take an umbrella, we need to check several states in a convoluted way.
 Maybe the sky can be cloudy while being rainy or clear.
 No matter how covoluted your if-statements, compile-time checking will verify that you have initialized your constant once and exactly once before it is used.
 ```Swift
