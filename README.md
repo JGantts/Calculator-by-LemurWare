@@ -69,9 +69,24 @@ Its backend code is `InitializerInterfaceController`.
 `InitializerInterfaceController`'s `awake` function does only one thing, reload the screen with the proper 3 screens, starting with the middle screen.
 
 ###### NumberInputInterfaceController
-This is the initial screen the user sees.
+This is the backend controller for the initial screen the user sees.
 It features all 10 digit, a display for the number, a clear/total button, and a decimal button.
 
 On the backend, there are 2 hooks for the UI (`valueDisplay`, `acButtonLabel`), 2 variables storing info about the decimal places entered, and a `state` variable.
 
+###### BasicFunctionInterfaceController
+It only has two actual variables. `value: Decimal` and `value: String`. `valueLabelDisplay` is the hook for the display.
+
 ###### TrigFunctionsInterfaceController
+This is the backend controller for the trigonometric screen. 
+
+###### Common/Anouncements
+This file is crucial to the rest of the code. It contains two `typealisas`es
+```Swift
+typealias AnnouncementCenter = NotificationCenter
+typealias Announcement = NSNotification
+```
+An `Announcement`/`NSNotification` is simply a way to communicate between two different processes or contexts.
+The `typealias` is there to make it easier to read code without getting confused about `UserNotification`s, aka what you probably think of when you hear the word "notification".
+- `NSNotification` is for communication within or between apps.
+- `UserNotification` is a how you get the user's attention when the app is not active.
